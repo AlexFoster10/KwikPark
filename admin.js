@@ -1,3 +1,5 @@
-class Admin extends User {
+class Admin extends SuperUser {
+    level = 1
     
+
 }
