@@ -1,6 +1,6 @@
 class Admin extends User {
     level = 1
-
+    
 
 }
 
