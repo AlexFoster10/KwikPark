@@ -1,1 +1,5 @@
-test update
+class User{
+    constructor(email, userName, ){
+
+    }
+}
