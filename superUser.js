@@ -1,9 +1,10 @@
-class SuperUser{
+class User{
     level = 0;
-    constructor(email, userName, password){
+    constructor(email, userName, password, phoneNumber){
         this.email = email;
         this.userName = userName;
         this.password = password;   //this part subject to change
+        this.phoneNumber = phoneNumber;
         
 
     }
