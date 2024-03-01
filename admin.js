@@ -1,8 +1,8 @@
 class Admin extends User {
-    level = 1
+    static #level = 1
     
 
 }
 
-var test = new Admin('email','bob','secret');
+var test = new Admin('email','bob','secret',43565465);
 console.log(test);

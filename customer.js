@@ -1,4 +1,5 @@
 class Customer extends User{
-    bal = 0;
-    cars = [];
+    static #level = 0;
+    #bal = 0;
+    #cars = [];
 } 
