@@ -3,6 +3,7 @@ class User{
     #userName = "";
     #password = "";
     #phoneNumber = 0;
+    static #level = 0
 
     constructor(email, userName, password, phoneNumber){
         this.#email = email;
