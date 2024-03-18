@@ -1,7 +1,7 @@
 class Space{
     #booked = false;
-    #area = 0; //idea is 20 spaces per area
-    #id = 0; //up to 20
+    #area = 0; 
+    #id = 0; 
 
 
     constructor(area,id){

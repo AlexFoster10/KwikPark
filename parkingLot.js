@@ -7,9 +7,10 @@ class ParkingLot{
         this.#name = name;
     }
     
-    populate(x){
+    //x is zone number a is space number
+    populate(x,a){
         for(let y=0;y<x;y++){
-            for(let z=0;z<20;z++){
+            for(let z=0;z<a;z++){
                 this.#spaces.push(new Space(y,z))
             }
         }
@@ -18,5 +19,5 @@ class ParkingLot{
 
 
 var lot = new ParkingLot("Test");
-lot.populate(2);
+lot.populate(3,5);
 console.log(lot);
