@@ -6,7 +6,7 @@ class Space{
 
     constructor(area,id){
         this.#area = area;
-        this.id = id;
+        this.#id = id;
         this.#booked = false
 
     }
