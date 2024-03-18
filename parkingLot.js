@@ -8,8 +8,8 @@ class ParkingLot{
     }
     
     populate(x){
-        for(y=0;y<x;y++){
-            for(z=0;z<19;z++){
+        for(let y=0;y<x;y++){
+            for(let z=0;z<20;z++){
                 this.#spaces.push(new Space(y,z))
             }
         }
