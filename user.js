@@ -16,5 +16,4 @@ class User{
     
 }
 
-//var bob = new User('testMail','Sam','pword');
-//console.log(bob);
+

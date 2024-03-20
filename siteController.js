@@ -8,10 +8,13 @@ class SiteController{
     }
 
     addLot(lot){
-        this.#lots.push(lot);
+        this.#lots.push();
     }
 
-    removeLot(){
-        this.#lots.
+    removeLot(lotName){
+        const index = array.indexOf(lotName);
+        if (index > -1) { // only splice array when item is found
+            array.splice(index, 1); // 2nd parameter means remove one item only
+}
     }
 }
