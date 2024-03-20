@@ -1,5 +1,5 @@
 class SiteController{
-    #lots = [];
+    #parkingLots = [];
     #name = "";
 
     constructor(name){
@@ -7,14 +7,16 @@ class SiteController{
         
     }
 
-    addLot(lot){
-        this.#lots.push();
+    addLot(parkingLot){
+        this.#parkingLots.push(parkingLot);
     }
 
-    removeLot(lotName){
-        const index = array.indexOf(lotName);
+    removeLot(parkingLot){
+        const index = array.indexOf(parkingLot);
         if (index > -1) { // only splice array when item is found
             array.splice(index, 1); // 2nd parameter means remove one item only
-}
+        }
     }
+
+    
 }
