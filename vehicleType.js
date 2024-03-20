@@ -1,5 +1,11 @@
-const VehicleType = {
-    Car: Symbol("Car"),
-    Bike: Symbol("Bike"),
-    Van: Symbol("Van"),
-}   
+class VehicleType{
+
+    static Car = new VehicleType("Car")
+    static Bike = new VehicleType("Bike")
+    static Van = new VehicleType("Van")
+
+    constructor(name){
+        this.name = name;
+    }
+
+}
