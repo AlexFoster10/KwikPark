@@ -1,9 +1,7 @@
 class SiteController{
     #parkingLots = [];
-    #name = "";
 
-    constructor(name){
-        this.#name = name;
+    constructor(){
         
     }
 
@@ -18,5 +16,5 @@ class SiteController{
         }
     }
 
-    
+
 }
