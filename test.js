@@ -12,3 +12,5 @@
 
 var myCar = new Vehicle("Test Name","LRO7 LOH","BIke")
 console.log(myCar);
+myCar.toggleEV();
+console.log(myCar);
