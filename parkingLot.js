@@ -26,6 +26,3 @@ class ParkingLot{
 }
 
 
-var lot = new ParkingLot("Test");
-lot.populate(3,5);
-console.log(lot);
