@@ -7,8 +7,10 @@
 // lot.populate(4,5);
 
 
-// var bob = new User('testMail','Sam','pword');
-// console.log(bob);
+var bob = new Customer('testMail','Sam','pword');
+console.log(bob);
+
+bob.toggleBadge();
 
 var myCar = new Vehicle("Test Name","LRO7 LOH","BIke")
 console.log(myCar);
