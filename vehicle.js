@@ -21,4 +21,15 @@ class Vehicle{
                     this.#type = VehicleType.Car;
             }
         }
+
+        toggleEV(){
+            if(this.#isEV){
+                this.#isEV = false;
+            }
+            else{
+                this.#isEV = true;
+            }
+        }
+
+
 }
