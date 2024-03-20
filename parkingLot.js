@@ -1,6 +1,7 @@
 class ParkingLot{
     #name = "";
-    #spaces = []
+    #spaces = [];
+    #admins = [];
 
 
     constructor(name){
@@ -9,11 +10,18 @@ class ParkingLot{
     
     //x is zone number a is space number
     populate(x,a){
-        for(let y=0;y<x;y++){
-            for(let z=0;z<a;z++){
-                this.#spaces.push(new Space(y,z))
+        //can only populate if no spaces
+        if (this.#spaces.length==0){
+            for(let y=0;y<x;y++){
+                for(let z=0;z<a;z++){
+                    this.#spaces.push(new Space(y,z));
+                }
             }
         }
+        else{
+            console.log("Spaces Already Present");
+        }
+
     }
 }
 
