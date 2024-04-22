@@ -12,8 +12,12 @@ var app = express();
 const port = 3000;
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+// Render the index Pug file
+app.get('/index', (req, res) => {
+  res.render('index');
+});
 
 app.use(logger('dev'));
 app.use(express.json());
