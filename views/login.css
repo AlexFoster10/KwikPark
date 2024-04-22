@@ -35,7 +35,34 @@ form div div {
     border-radius: 10px;
 }
 
-/*Input Label Styles*/
+/*Input Label CSS*/
 label {
   color: white;
+}
+
+/*Username Label Override*/
+#username + label {
+  vertical-align: middle;
+}
+
+/*Password Label Override*/
+#password + label {
+  color: rgb(17, 4, 4);
+  text-align: left;
+}
+
+/*Input CSS*/
+input {
+  width: calc(100% - 40px);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/*Submit Button CSS*/
+button[type="submit"] {
+  width: 100%;
+  background-color: white;
+  color: blue;
+  border-radius: 5px;
+  padding: 10px;
 }
