@@ -19,6 +19,13 @@ app.get('/index', (req, res) => {
   res.render('index');
 });
 
+app.get('/signup', (req, res) => {
+  res.render('signup');
+});
+app.get('/login', (req, res) => {
+  res.render('login');
+});
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
