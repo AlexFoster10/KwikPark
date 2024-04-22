@@ -7,6 +7,10 @@ class ParkingLot{
     constructor(name){
         this.#name = name;
     }
+
+    SetSpaces(array){
+        this.#spaces = array;
+    }
     
     //x is zone number a is space number
     populate(x,a){
@@ -22,6 +26,13 @@ class ParkingLot{
             console.log("Spaces Already Present");
         }
 
+    
+    }
+
+    GetStatus(){
+        for(let y=0;y<this.#spaces.length;y++){
+            this.#spaces[y].GetStatus();
+        }
     }
 }
 

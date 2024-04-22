@@ -16,3 +16,11 @@ var myCar = new Vehicle("Test Name","LRO7 LOH","BIke")
 console.log(myCar);
 myCar.toggleEV();
 console.log(myCar);
+
+var admin = new Admin();
+var lot = new ParkingLot("lot1");
+
+lot.populate(1,3)
+console.log(lot);
+
+admin.checkLotStatus(lot);
