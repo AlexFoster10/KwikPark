@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// variables and cosntants
 var app = express();
 const port = 3000;
 
@@ -42,5 +43,7 @@ app.use(function(err, req, res, next) {
 app.listen(port, () => {
   console.log(`we are live on port ${port}!`)
 })
+
+
 
 module.exports = app;
