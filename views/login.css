@@ -6,3 +6,17 @@ body {
     margin: 0px;
   }
 
+/*Top Bar CSS */
+.top-bar {
+    background-color: #cfe4ff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+/*Form CSS*/
+form {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+  
