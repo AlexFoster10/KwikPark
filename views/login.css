@@ -34,3 +34,8 @@ form div div {
     padding: 20px;
     border-radius: 10px;
 }
+
+/*Input Label Styles*/
+label {
+  color: white;
+}
