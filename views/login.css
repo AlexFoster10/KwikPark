@@ -20,3 +20,17 @@ form {
     text-align: center;
 }
   
+/*Username/Password box CSS*/
+form div {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+  
+/*Username/Password Input CSS*/
+form div div {
+    margin: 20px;
+    background-color: #cfe4ff;
+    padding: 20px;
+    border-radius: 10px;
+}
