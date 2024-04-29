@@ -25,6 +25,13 @@ app.get('/signup', (req, res) => {
 app.get('/login', (req, res) => {
   res.render('login');
 });
+app.get('/userHome', (req, res) => {
+  res.render('userHome');
+});
+app.get('/Admin', (req, res) => {
+  res.render('Admin');
+});
+
 
 app.use(logger('dev'));
 app.use(express.json());
