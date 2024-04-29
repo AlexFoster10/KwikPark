@@ -1,18 +1,76 @@
-/*Changes made from login*/
-
-/*Body CSS stays the same*/
-body {
-    color: rgb(255, 0, 0);
-    background-color: #3a414a;
-    padding: 0px;
-    margin: 0px;
+* {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  
 }
 
-/*Top Bar CSS stays the same*/
-.top-bar {
-    background-color: #cfe4ff;
-    padding: 10px;
-    text-align: center;
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.15;
+  color: var(--dl-color-gray-black);
+  background-color: var(--dl-color-gray-white);
+}
+
+
+.Page {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  background-color: #3a414a;
+}
+.header {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-oneandhalfunits);
+  align-items: center; /* Align items vertically */
+  margin-bottom: 8px;
+  justify-content: space-between; /* Align items horizontally */
+  background-color: #cfe4ff
+}
+
+.logo {
+  width: 76px;
+  height: 62px;
+  object-fit: cover;
+}
+.title {
+  font-size: 60px;
+  margin-left: var(--dl-space-space-oneandhalfunits);
+}
+.main {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-oneandhalfunits);
+
+  margin-bottom: 8px;
+  flex-direction: column;
+}
+.pageTitle {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
 }
 
 /*Form CSS stays the same*/
@@ -20,6 +78,7 @@ form {
     border: 1px solid white;
     padding: 10px;
     text-align: center;
+    width: 90%;
 }
 
 /*Username/Password box CSS stays the same*/

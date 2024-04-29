@@ -4,34 +4,34 @@ html
     style
       include stylesheets/signup.css
     title Signup Page
-
   body
-    .top-bar UEParks
-    h1 Sign Up
-    form(action="/signup", method="POST")
-      div
-        div
-          img(src="icon_email.png", alt="Email")
-          // Replace "icon_email.png" with your actual icon
-          label(for="email") Email:
-          input(type="email", id="email", name="email", placeholder="Enter your email")
-      div
-        div
-          img(src="icon_username.png", alt="Username")
-          // Replace "icon_username.png" with your actual icon
-          label(for="new-username") New username:
-          input(type="text", id="new-username", name="username", placeholder="Create a username")
-      div
-        div
-          label(for="password", style="color: rgb(17, 4, 4); text-align:left;") Password:
-          input(type="password", id="password", name="password", placeholder="Create a password")
-      div
-        div
-          label(for="confirm-password", style="color: rgb(17, 4, 4); text-align:left;") Confirm password:
-          input(type="password", id="confirm-password", name="confirm-password", placeholder="Confirm your password")
-      button(type="submit") Sign Up
-    // Button to navigate to another page
-    a(href="/login", class="button") 
-     button login
-
-  script(src="script.js") 
+    .Page
+      .header
+        img.logo(src="/img/image.jpg", alt="Description of the image")
+        h1.title KwikPark
+      .main
+        h1 Sign Up
+        form(action="/signup", method="POST")
+          div
+            div
+              img.logo(src="/img/image.jpg", alt="Email")
+              label(for="email") Email:
+              input(type="email", id="email", name="email", placeholder="Enter your email")
+          div
+            div
+              img.logo(src="/img/image.jpg", alt="Username")
+              label(for="new-username") New username:
+              input(type="text", id="new-username", name="username", placeholder="Create a username")
+          div
+            div
+              label(for="password") Password:
+              input(type="password", id="password", name="password", placeholder="Create a password")
+          div
+            div
+              label(for="confirm-password") Confirm password:
+              input(type="password", id="confirm-password", name="confirm-password", placeholder="Confirm your password")
+          button(type="submit") Sign Up
+        // Button to navigate to another page
+      a(href="/login", class="button") 
+       button login
+    script(src="script.js")
