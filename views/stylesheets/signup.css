@@ -1,0 +1,72 @@
+/*Changes made from login*/
+
+/*Body CSS stays the same*/
+body {
+    color: rgb(255, 0, 0);
+    background-color: #3a414a;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*Top Bar CSS stays the same*/
+.top-bar {
+    background-color: #cfe4ff;
+    padding: 10px;
+    text-align: center;
+}
+
+/*Form CSS stays the same*/
+form {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+/*Username/Password box CSS stays the same*/
+form div {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/*Username/Password Input CSS*/
+form div div, form div .email-input {
+    margin: 20px;
+    background-color: #cfe4ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*Input Label CSS stays the same*/
+label {
+  color: white;
+}
+
+/*New Username Label Override*/
+#new-username + label {
+  vertical-align: middle;
+}
+
+/*Password Label Override stays the same*/
+#password + label {
+  color: rgb(17, 4, 4);
+  text-align: left;
+}
+
+/*Email Label Override, if needed:*/
+
+/*Input CSS stays the same*/
+input {
+  width: calc(100% - 40px);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/*Submit Button CSS stays the same*/
+button[type="submit"] {
+  width: 100%;
+  background-color: white;
+  color: blue;
+  border-radius: 5px;
+  padding: 10px;
+}

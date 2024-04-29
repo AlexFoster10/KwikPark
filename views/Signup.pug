@@ -1,22 +1,35 @@
 doctype html
 html
   head
-    title Login and Sign Up
-    link(rel="stylesheet", href="views/login.css")
-  body(style="color: white; background-color: #3a414a; padding: 0px; margin: 0px;")
-    .top-bar(style="background-color: #cfe4ff; padding: 10px; text-align: center;") UEParks
-    h1 Sign Up 
-    form(action="/login", method="POST", style="border: white 1px solid; padding: 10px; text-align: center;")
-      div(style="width: 80%; margin: 20px auto; border-radius: 10px;")
-        div(style="margin: 20px; background-color: #cfe4ff;")
-          img(src="icon_username.png", alt="Username", style="vertical-align: middle; margin-right: 10px;")
-          label(for="username", style="color: white;") Username:
-          input(type="text", id="username", name="username", style="width: calc(100% - 40px); border-radius: 5px; padding: 5px;", placeholder="Enter your username")
-        div(style="margin: 20px;background-color: #cfe4ff ;padding:20px; border-radius: 10px;")
-          label(for="password", style="color: rgb(17, 4, 4); text-align:left ;") Password:
-          input(type="password", id="password", name="password", style="width: calc(100% - 40px); border-radius: 5px; padding: 5px;", placeholder="Enter your password")
-        button(type="submit", style="width: 100%; background-color: white; color: blue; border-radius: 5px; padding: 10px;") Login
-    button(onclick="forgotPassword()") Forgot Password?
+    style
+      include stylesheets/signup.css
+    title Signup Page
+
+  body
+    .top-bar UEParks
+    h1 Sign Up
+    form(action="/signup", method="POST")
+      div
+        div
+          img(src="icon_email.png", alt="Email")
+          // Replace "icon_email.png" with your actual icon
+          label(for="email") Email:
+          input(type="email", id="email", name="email", placeholder="Enter your email")
+      div
+        div
+          img(src="icon_username.png", alt="Username")
+          // Replace "icon_username.png" with your actual icon
+          label(for="new-username") New username:
+          input(type="text", id="new-username", name="username", placeholder="Create a username")
+      div
+        div
+          label(for="password", style="color: rgb(17, 4, 4); text-align:left;") Password:
+          input(type="password", id="password", name="password", placeholder="Create a password")
+      div
+        div
+          label(for="confirm-password", style="color: rgb(17, 4, 4); text-align:left;") Confirm password:
+          input(type="password", id="confirm-password", name="confirm-password", placeholder="Confirm your password")
+      button(type="submit") Sign Up
     // Button to navigate to another page
     a(href="/login", class="button") 
      button login

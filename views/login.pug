@@ -3,22 +3,22 @@ html
   head
     style
       include stylesheets/login.css
-    title Login and Sign UpC
+    title Login
 
     body
-    .top-bar(style="background-color: #cfe4ff; padding: 10px; text-align: center;") UEParks
+    .top-bar() UEParks
     h1 Login
-    form(action="/login", method="POST", style="border: white 1px solid; padding: 10px; text-align: center;")
-      div(style="width: 80%; margin: 20px auto; border-radius: 10px;")
-        div(style="margin: 20px; background-color: #cfe4ff;")
-          img(src="icon_username.png", alt="Username", style="vertical-align: middle; margin-right: 10px;")
+    form(action="/login", method="POST")
+      div()
+        div()
+          img(src="icon_username.png", alt="Username")
           // Replace "icon_username.png" with your actual icon
-          label(for="username", style="color: white;") Username:
-          input(type="text", id="username", name="username", style="width: calc(100% - 40px); border-radius: 5px; padding: 5px;", placeholder="Enter your username")
-        div(style="margin: 20px;background-color: #cfe4ff ;padding:20px; border-radius: 10px;")
+          label(for="username") Username:
+          input(type="text", id="username", name="username", placeholder="Enter your username")
+        div()
           label(for="password", style="color: rgb(17, 4, 4); text-align:left ;") Password:
-          input(type="password", id="password", name="password", style="width: calc(100% - 40px); border-radius: 5px; padding: 5px;", placeholder="Enter your password")
-        button(type="submit", style="width: 100%; background-color: white; color: blue; border-radius: 5px; padding: 10px;") Login
+          input(type="password", id="password", name="password", placeholder="Enter your password")
+        button(type="submit") Login
     // Button to navigate to another page
     button(onclick="forgotPassword()") Forgot Password?
     a(href="/Signup", class="button") 
