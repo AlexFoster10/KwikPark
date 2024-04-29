@@ -1,0 +1,150 @@
+doctype html
+html(lang='en')
+  head
+    title KwikPark Admin Page
+    meta(property='og:title', content='Admin Page')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(charset='utf-8')
+    meta(property='twitter:card', content='summary_large_image')
+    style
+      include stylesheets\user.css
+      include stylesheets\custom.css
+      include stylesheets\calander.css
+    script(src="https://unpkg.com/leaflet/dist/leaflet.js")
+
+  body
+    .Page
+      .header
+        img.logo(src="/img/image.jpg" alt="Description of the image")
+        h1.title KwikPark
+        .dropdown
+          .dropdown-content
+            a(href='link_to_page1') Page 1
+            a(href='link_to_page2') Page 2
+            a(href='link_to_page3') Page 3
+            a(href='link_to_page4') Page 4
+          button.burger-icon ☰
+      .main
+        h1.pageTitle Admin Home Page
+      .home-slider.swiper(data-thq='slider', data-pagination='true', data-navigation='true', data-autoplay='false')
+        .swiper-wrapper(data-thq='slider-wrapper')
+          .home-slider-slide.swiper-slide(data-thq='slider-slide')
+            .SlideCon
+              h1.lotTitle Upcoming Booking
+              .lotCon
+                .lotConLeft
+                    span.lotInfo.textarea
+                     br
+                     span parking Lot: Carpark Yellow
+                      br
+                      br
+                      span Space: 5A
+                      br
+                      br
+                      span Vehicle: fj22 di4ja
+                      br 
+                      br
+                      span Estimated Price: £5
+                .rightCon
+                 img.PLot(src='/img/image.jpg', alt='image')
+                
+                
+          .home-slider-slide1.swiper-slide(data-thq='slider-slide1')
+            .SlideCon
+              h1.lotTitle Carpark: 
+              .lotCon
+                .lotConLeft
+                    select.dateSelect
+                     option(value='Option 2') Option 2
+                      option(value='Option 3') Option 3
+                    span.lotInfo.textarea
+                     br
+                     span parking spaces available: 4
+                      br
+                      br
+                      span fjdjfjdjf : 6
+                      br
+                      br
+                      span fdfdf : 7
+                .rightCon
+                 img.PLot(src='/img/image.jpg', alt='image')
+                
+                #map(style="height: 100%;")
+        .home-slider-button-next.swiper-button-next(data-thq='slider-button-next')
+        .home-slider-button-prev.swiper-button-prev(data-thq='slider-button-prev')
+        .home-slider-pagination.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal(data-thq='slider-pagination')
+          .swiper-pagination-bullet(data-thq='slider-pagination-bullet')
+          .swiper-pagination-bullet(data-thq='slider-pagination-bullet')
+      .bottom
+        .Left
+          .home-slider1.swiper(data-thq='slider', data-pagination='true', data-navigation='true')
+            .swiper-wrapper(data-thq='slider-wrapper')
+              .home-slider-slide2.swiper-slide(data-thq='slider-slide2')
+                h1.usrTitle Vehicle
+                span.home-text31
+                  span Customer: jack daniels
+                  br
+                  span Registration Num: 5ffw543
+                  br
+                  span Type: car
+                  br
+                  span Electric: no
+                  br
+                  span Disabled: no
+                img.imgBox(src='/img/image.jpg', alt='image')
+              .home-slider-slide3.swiper-slide(data-thq='slider-slide3')
+                h1.usrTitle Vehicle
+                span.home-text31
+                  span Customer: jack daniels
+                  br
+                  span Registration Num: 5ffw543
+                  br
+                  span Type: car
+                  br
+                  span Electric: no
+                  br
+                  span Disabled: no
+                img.imgBox(src='/img/image.jpg', alt='image')
+            .home-slider-pagination1.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal(data-thq='slider-pagination')
+              .swiper-pagination-bullet.swiper-pagination-bullet-active(data-thq='slider-pagination-bullet')
+            .swiper-button-prev(data-thq='slider-button-prev')
+            .swiper-button-next(data-thq='slider-button-next')
+          .userCon
+            h1.usrTitle Wallet
+              span.Overall Balance:
+              span.Amount £54
+                button.moremsg(type='button') View More Messages
+                button.msgadmin(type='button') Email Admin
+        .msgCon
+          h2.msgTitle Messages
+          ul.home-ul.list
+            li.msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            li.msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            li.msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            li.msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            li.msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            li.msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+          button.moremsg(type='button') View More Messages
+          button.msgadmin(type='button') Email Admin
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js')
+    script 
+      include index.js
