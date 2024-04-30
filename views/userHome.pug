@@ -7,9 +7,11 @@ html(lang='en')
     meta(charset='utf-8')
     meta(property='twitter:card', content='summary_large_image')
     style
-      include stylesheets\user.css
-      include stylesheets\custom.css
-      include stylesheets\calander.css
+      include style/style.css
+      include style/user.css
+      include style/custom.css
+      include style/calander.css
+      include style/map.css
     script(src="https://unpkg.com/leaflet/dist/leaflet.js")
 
   body
@@ -19,10 +21,10 @@ html(lang='en')
         h1.title KwikPark
         .dropdown
           .dropdown-content
-            a(href='login') Login
-            a(href='userHome') User Home Page
-            a(href='error') Error
-            a(href='link_to_page4') Page 4
+            a(href='/admin') admin
+            a(href='/userHome') User Home
+            a(href='/login') login
+            a(href='/message') message
           button.burger-icon ☰
       .main
         h1.pageTitle Admin Home Page
@@ -148,3 +150,4 @@ html(lang='en')
     script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js')
     script 
       include index.js
+      include map.js

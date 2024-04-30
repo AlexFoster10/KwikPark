@@ -1,28 +1,43 @@
 doctype html
 html
   head
+    title Signup Page
     style
-      include stylesheets/login.css
-    title Login
+      include style/style.css
+      include style/signup.css
 
-    body
-    .top-bar() UEParks
-    h1 Login
-    form(action="/login", method="POST")
-      div
-        div
-          img(src="img\image.jpg", alt="Username")
-          // Replace "icon_username.png" with your actual icon
-          label(for="username") Username:
-          input(type="text", id="username", name="username", placeholder="Enter your username")
-        div
-          label(for="password", style="color: rgb(17, 4, 4); text-align:left ;") Password:
-          input(type="password", id="password", name="password", placeholder="Enter your password")
-        button(type="submit") Login
-    // Button to navigate to another page
-    button(onclick="forgotPassword()") Forgot Password?
-    a(href="/Signup", class="button") 
-     button Sign Up
 
-  script(src="script.js") 
-  // Link to your JavaScript filet
+  body
+    .page
+      .header
+        img.logo(src="/img/image.jpg", alt="image")
+        h1.title KwikPark
+        .dropdown
+          .dropdown-content
+            a(href='/admin') admin
+            a(href='/userHome') User Home
+            a(href='/login') login
+            a(href='/message') messege
+          button.burger-icon ☰
+      h1.subHeading Sign Up
+      .main
+        form.form(action="/signup", method="POST")
+          .box
+            img.imglogo(src="/img/image.jpg", alt="Username")
+            label.label(for="new-username") New username:
+          input.input(type="text", id="new-username", name="username", placeholder="Create a username")
+
+          .box
+            img.imglogo(src="/img/image.jpg", alt="Username")
+            label.label(for="password") Password:
+          input.input(type="password", id="password", name="password", placeholder="Create a password")
+
+          button.login(type="submit") login
+        // Button to navigate to another page
+      .bottom
+        a(href="/login", class="NewUsr") 
+         button.NewUsr New User
+        a(href="/login", class="fPwd") 
+         button.fPwd Forgot Password
+
+

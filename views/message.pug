@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+  head
+    title Likable Juicy Lyrebird
+    meta(property="og:title", content="Likable Juicy Lyrebird")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    style
+      include style/style.css 
+      include style/messege.css
+  body
+    .page
+      .header
+        img.logo(src="/img/image.jpg", alt="image")
+        h1.title KwikPark
+        .dropdown
+          .dropdown-content
+            a(href='/admin') admin
+            a(href='/userHome') User Home
+            a(href='/login') login
+            a(href='/message') messege
+          button.burger-icon ☰
+      h1.pageTitle Messages
+      .Layout
+        .RightBox
+          h2.SubHeading Messages
+          .home-ul.list
+            .msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            .msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            .msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            .msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            .msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            .msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+            .msgli.list-item
+              img.msgimg(src='/img/image.jpg', alt='image')
+              span.Sender Sender
+              span.Subject Subject
+          button.adminBtn.button(type="button") Email Admin
+        .LeftBox
+          h2.SubHeading Compose Message
+          .composeMsg
+            span.msgText To: 
+              input(type="text") 
+            span.msgText Subject: 
+              input(type="text") 
+            span.writeMsg
+              input(type="text", placeholder="Compose Message")
+
+
+          button.home-button1.button(type="button") Send Message

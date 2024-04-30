@@ -1,37 +1,51 @@
 doctype html
 html
   head
-    style
-      include stylesheets/signup.css
     title Signup Page
+    style
+      include style/style.css
+      include style/signup.css
+
+
   body
-    .Page
+    .page
       .header
-        img.logo(src="/img/image.jpg", alt="Description of the image")
+        img.logo(src="/img/image.jpg", alt="image")
         h1.title KwikPark
+        .dropdown
+          .dropdown-content
+            a(href='/admin') admin
+            a(href='/userHome') User Home
+            a(href='/login') login
+            a(href='/message') messege
+          button.burger-icon ☰
+      h1.subHeading Sign Up
       .main
-        h1 Sign Up
-        form(action="/signup", method="POST")
-          div
-            div
-              img.logo(src="/img/image.jpg", alt="Email")
-              label(for="email") Email:
-              input(type="email", id="email", name="email", placeholder="Enter your email")
-          div
-            div
-              img.logo(src="/img/image.jpg", alt="Username")
-              label(for="new-username") New username:
-              input(type="text", id="new-username", name="username", placeholder="Create a username")
-          div
-            div
-              label(for="password") Password:
-              input(type="password", id="password", name="password", placeholder="Create a password")
-          div
-            div
-              label(for="confirm-password") Confirm password:
-              input(type="password", id="confirm-password", name="confirm-password", placeholder="Confirm your password")
-          button(type="submit") Sign Up
+        form.form(action="/signup", method="POST")
+          .box
+            img.imglogo(src="/img/image.jpg", alt="Email")
+            label.label(for="email") Email:
+          input.input(type="email", id="email", name="email", placeholder="Enter your email")
+
+          .box
+            img.imglogo(src="/img/image.jpg", alt="Username")
+            label.label(for="new-username") New username:
+          input.input(type="text", id="new-username", name="username", placeholder="Create a username")
+
+          .box
+            img.imglogo(src="/img/image.jpg", alt="Username")
+            label.label(for="password") Password:
+          input.input(type="password", id="password", name="password", placeholder="Create a password")
+
+          .box
+            img.imglogo(src="/img/image.jpg", alt="Username")
+            label.label(for="confirm-password") Confirm password:
+          input.input(type="password", id="confirm-password", name="confirm-password", placeholder="Confirm your password")
+          
+          button.signupBtn(type="submit") Sign Up
         // Button to navigate to another page
-      a(href="/login", class="button") 
-       button login
-    script(src="script.js")
+      a(href="/login", class="loginBtn") 
+       button.loginBtn
+        p Login 
+        P If already 
+
