@@ -18,19 +18,22 @@ app.set('views', path.join(__dirname, 'views'));
 app.get('/index', (req, res) => {
   res.render('index');
 });
-
+app.get('/userHome', (req, res) => {
+  res.render('userHome');
+});
+app.get('/admin', (req, res) => {
+  res.render('admin');
+});
+app.get('/message', (req, res) => {
+  res.render('message');
+});
 app.get('/signup', (req, res) => {
   res.render('signup');
 });
 app.get('/login', (req, res) => {
   res.render('login');
 });
-app.get('/userHome', (req, res) => {
-  res.render('userHome');
-});
-app.get('/Admin', (req, res) => {
-  res.render('Admin');
-});
+
 
 
 app.use(logger('dev'));
