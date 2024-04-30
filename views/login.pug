@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Signup Page
+    title Login Page
     style
       include style/style.css
       include style/signup.css
@@ -19,7 +19,7 @@ html
             a(href='/login') login
             a(href='/message') messege
           button.burger-icon ☰
-      h1.subHeading Sign Up
+      h1.subHeading Login
       .main
         form.form(action="/signup", method="POST")
           .box
@@ -35,7 +35,7 @@ html
           button.login(type="submit") login
         // Button to navigate to another page
       .bottom
-        a(href="/login", class="NewUsr") 
+        a(href="/signup", class="NewUsr") 
          button.NewUsr New User
         a(href="/login", class="fPwd") 
          button.fPwd Forgot Password
