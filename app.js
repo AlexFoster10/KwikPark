@@ -45,26 +45,43 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-// catch 404 and forward to error handler
+// 404 error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// error handler
+// Error handler middleware
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
+  // Set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  // Determine the error status and message
+  let errorStatus = err.status || 500;
+  let errorMessage = 'Oops! Something went wrong.';
+
+  // Customize error message based on status code
+  if (errorStatus === 404) {
+    errorMessage = 'Sorry, the page you requested could not be found.';
+  } else if (errorStatus === 401) {
+    errorMessage = 'Unauthorized: Access is denied due to invalid credentials.';
+  } else if (errorStatus === 403) {
+    errorMessage = 'Forbidden: You don\'t have permission to access this resource.';
+  } else if (errorStatus === 400) {
+    errorMessage = 'Bad Request: The request cannot be fulfilled due to bad syntax.';
+  } // Add more conditions as needed
+
+  // Render the error page with specific error message
+  res.status(errorStatus);
+  res.render('error', { 
+    errorTitle: `${errorStatus}`, 
+    errorMessage: errorMessage 
+  });
 });
-
+// Start the server
 app.listen(port, () => {
-  console.log(`we are live on port ${port}!`)
-})
-
+  console.log(`Server is running on port ${port}!`);
+});
 
 
 module.exports = app;

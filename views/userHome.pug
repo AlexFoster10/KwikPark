@@ -46,6 +46,7 @@ html(lang='en')
                       br 
                       br
                       span Estimated Price: £5
+                      button#openFormButton(type="button") Open Form
                 .rightCon
                  img.PLot(src='/img/image.jpg', alt='image')
                 
@@ -145,7 +146,21 @@ html(lang='en')
               span.Subject Subject
           button.moremsg(type='button') View More Messages
           button.msgadmin(type='button') Email Admin
+
+    .popup-form-container
+      .popup-form
+        button#closeFormButton(type="button") × // Button to close the form
+        h2 Fill in the Form
+        form#popupForm
+          label(for="name") Name:
+          input(type="text" id="name" name="name" required)
+          br
+          label(for="email") Email:
+          input(type="email" id="email" name="email" required)
+          br
+          button(type="submit") Submit
     script(src='https://code.jquery.com/jquery-3.6.0.min.js')
     script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js')
     script 
       include index.js
+      include booking.js

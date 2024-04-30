@@ -1,6 +1,31 @@
-extends layout
-
-block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Snake Game
+    style 
+      include style/style.css
+      include style/error.css
+  body
+      .Page
+        .header
+          img.logo(src='/img/image.jpg', alt='image', class='logo')
+          h1.title KwikPark
+          .dropdown
+            .dropdown-content
+              a(href='/admin') admin
+              a(href='/userHome') User Home
+              a(href='/login') login
+              a(href='/message') message
+            button.burger-icon ☰
+        .main
+          .error-container
+            h1 Error: #{errorTitle}
+            p #{errorMessage}
+            p Please try again later.
+          .container
+            canvas#gameCanvas(width="400", height="400")
+            button#playButton Play
+  script 
+    include error.js
