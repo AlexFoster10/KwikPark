@@ -347,6 +347,8 @@
   width: 484px;
   height: 66px;
   background-color: #3578ab;
+  margin: 20px;
+  border-radius: 8px;
 }
 .msgadmin {
   color: #ffffff;
@@ -355,4 +357,6 @@
   margin-top: var(--dl-space-space-oneandhalfunits);
   border-color: #ffffff;
   background-color: #3578ab;
+  margin: 20px;
+  border-radius: 8px;
 }
