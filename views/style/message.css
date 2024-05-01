@@ -101,7 +101,7 @@
 
 .msgli {
   width:95%;
-  min-height: 90px;
+  min-height: 120px; /*Adjusted height*/
   display: flex;
   position: relative;
   align-items: center;
@@ -129,6 +129,7 @@
   position: absolute;
   left: 110px; 
   right: 20px; 
+  height: calc(50% - 60px); /* Adjusted height */
 }
 
 .Sender {
@@ -160,8 +161,7 @@
   background-color: #cfe4ff;
   margin-top:16px;
   box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px;
-
-
+  height: 736px; /* Increased height */
 }
 .msgText, .writeMsg {
   width: 90%;
