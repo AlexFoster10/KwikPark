@@ -13,25 +13,27 @@
 
 /*Media Queries */
 @media (max-width: 768px) {
-  .RightBox, .LeftBox, .home-ul {
-    flex-direction: column;
-    width: 95%;
-    margin: 10px auto;
+  .msgimg {
+    width: 80%; /* Reduce width on smaller screens */
+    margin-bottom: 20px; /* Increase space below image */
+  }
+  
+  .Sender, .Subject {
+    width: 95%; /* Increase width to fill space */
+    margin: 5px auto 20px; /* Adjust margins to prevent overlap */
+  }
+}
+
+/* Further adjustments for even smaller screens */
+@media (max-width: 480px) {
+  .msgimg {
+    width: 100%; /* Use full container width */
+    margin-bottom: 25px; /* Larger space below image */
   }
 
-  .SubHeading {
-    font-size: 24px;
-    margin-top: 10px;
-  }
-
-  .adminBtn, .home-button1 {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  .msgText, .writeMsg {
-    width: 85%;
-    padding: 15px;
+  .Sender, .Subject {
+    width: 100%; /* Use full width */
+    margin: 10px auto; /* Increase margin to ensure separation */
   }
 }
 
