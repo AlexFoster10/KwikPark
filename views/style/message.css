@@ -130,6 +130,7 @@
   left: 110px; 
   right: 20px; 
   height: calc(50% - 60px); /* Adjusted height */
+  font-size: 2vw; /*Adjusted font size*/
 }
 
 .Sender {
