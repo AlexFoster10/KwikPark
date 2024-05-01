@@ -127,22 +127,22 @@
 
 .Sender, .Subject {
   position: absolute;
-  left: 110px;  /* Increase from left to create a gap after the image */
-  right: 20px;  /* Maintain some space from the right edge of the msgli */
+  left: 110px; 
+  right: 20px; 
 }
 
 .Sender {
-  top: 20px;    /* Set top margin for clear separation */
-  height: calc(50% - 40px); /* Adjust height to maintain space at bottom */
-  width: auto;  /* Adjust width automatically to fit available space */
+  top: 20px;
+  height: calc(50% - 40px);
+  width: auto; 
   border-radius: 16px;
   background-color: rgb(255, 255, 255);
 }
 
 .Subject {
-  bottom: 20px; /* Set bottom margin for clear separation */
-  height: calc(50% - 40px); /* Adjust height to maintain space at top */
-  width: auto;  /* Adjust width automatically to fit available space */
+  bottom: 20px; 
+  height: calc(50% - 40px); 
+  width: auto; 
   border-radius: 16px;
   background-color: rgb(255, 255, 255);
 }
