@@ -1,3 +1,39 @@
+/*Base styles*/
+.composeMsg, .home-ul, .RightBox, .LeftBox {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px;
+}
+
+.msgli, .Sender, .Subject {
+  width: 90%;
+  margin: 10px auto;
+}
+
+/*Media Queries */
+@media (max-width: 768px) {
+  .RightBox, .LeftBox, .home-ul {
+    flex-direction: column;
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .SubHeading {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .adminBtn, .home-button1 {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .msgText, .writeMsg {
+    width: 85%;
+    padding: 15px;
+  }
+}
 
 .Layout {
   height: 910px;
