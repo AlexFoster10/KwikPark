@@ -128,23 +128,20 @@
 .Sender, .Subject {
   position: absolute;
   left: 110px; 
-  right: 20px; 
+  right: 20px;
+  width: auto; 
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
 }
 
 .Sender {
   top: 20px;
-  height: calc(50% - 40px);
-  width: auto; 
-  border-radius: 16px;
-  background-color: rgb(255, 255, 255);
+  bottom: 50%; /* This changes the bottom edge to mid-point, increasing the effective height */
 }
 
 .Subject {
-  bottom: 20px; 
-  height: calc(50% - 40px); 
-  width: auto; 
-  border-radius: 16px;
-  background-color: rgb(255, 255, 255);
+  top: 50%; /* Starts from the mid-point, allowing the rest for Subject */
+  bottom: 20px;
 }
 
 .composeMsg {
