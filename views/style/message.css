@@ -35,6 +35,17 @@
   }
 }
 
+.button {
+  width: 100%;
+  padding: 10px; 
+  margin-top: 20px;
+  box-sizing: border-box; 
+}
+.RightBox, .LeftBox {
+  display: flex;
+  flex-direction: column; 
+}
+
 .Layout {
   height: 910px;
   display: flex;
