@@ -7,9 +7,10 @@ html(lang='en')
     meta(charset='utf-8')
     meta(property='twitter:card', content='summary_large_image')
     style
-      include stylesheets\admin.css
-      include stylesheets\custom.css
-      include stylesheets\calander.css
+      include style/admin.css
+      include style/custom.css
+      include style/calander.css
+      include style/style.css
 
   body
     .Page
@@ -18,13 +19,12 @@ html(lang='en')
         h1.title KwikPark
         .dropdown
           .dropdown-content
-            a(href='login') Login
-            a(href='userHome') User Home Page
-            a(href='error') Error
-            a(href='link_to_page4') Page 4
+            a(href='/admin') admin
+            a(href='/userHome') User Home
+            a(href='/login') login
+            a(href='/message') message
           button.burger-icon ☰
-      .main
-        h1.pageTitle Admin Home Page
+      h1.pageTitle Admin Home Page
       .home-slider.swiper(data-thq='slider', data-pagination='true', data-navigation='true', data-autoplay='false')
         .swiper-wrapper(data-thq='slider-wrapper')
           .home-slider-slide.swiper-slide(data-thq='slider-slide')
@@ -34,23 +34,22 @@ html(lang='en')
                 .lotConLeft
                   img.PLot(src='/img/image.jpg', alt='image')
                 .rightCon
-                  select.dateSelect
-                    option(value='Option 2') Option 2
-                    option(value='Option 3') Option 3
+                  .dateSelect
+                    input.datepicker#datepicker(type='text', placeholder='Select a date')
                   span.lotInfo.textarea
                     br
-                    span Available spaces: 4
+                    span parking spaces available: 55
                     br
                     br
-                    span Available E chargers : 6
+                    span Avalible E Chargers : 6
                     br
                     br
-                    span Available Disabled bays : 7
+                    span Avalible Disabled Bays : 7
               .otherButtons
-                button.home-button.button(type="button") View Parking Spaces
-                button.home-button.button(type='button') Manage Spaces
-                button.home-button.button(type='button') Manage Lot
-                button.home-button.button(type='button') Parking Requests
+                button.home-button.button(type='button') Button
+                button.home-button.button(type='button') Button
+                button.home-button.button(type='button') Button
+                button.home-button.button(type='button') Button
           .home-slider-slide1.swiper-slide(data-thq='slider-slide1')
             .SlideCon
               h1.lotTitle Carpark: Yellow
@@ -59,16 +58,16 @@ html(lang='en')
                   img.PLot(src='/img/image.jpg', alt='image')
                 .rightCon
                   .dateSelect
-                    input#datepicker(type='text', placeholder='Select a date')
+                    input.datepicker#datepicker(type='text', placeholder='Select a date')
                   span.lotInfo.textarea
                     br
-                    span parking spaces available: 4
+                    span parking spaces available: 83
                     br
                     br
-                    span fjdjfjdjf : 6
+                    span Avalible E Chargers : 2
                     br
                     br
-                    span fdfdf : 7
+                    span Avalible Disabled Bays : 3
               .otherButtons
                 button.home-button.button(type='button') Button
                 button.home-button.button(type='button') Button
@@ -84,18 +83,12 @@ html(lang='en')
           .home-slider1.swiper(data-thq='slider', data-pagination='true', data-navigation='true')
             .swiper-wrapper(data-thq='slider-wrapper')
               .home-slider-slide2.swiper-slide(data-thq='slider-slide2')
-                h1.Earnings
-                  span Earnings
-                  br
-                  br
+                h1.subheading Earnings
                 span.Overall Carpark Yellow:
                 span.Amount £1050
                 img.imgBox(src='/img/image.jpg', alt='image')
               .home-slider-slide3.swiper-slide(data-thq='slider-slide3')
-                h1.Earnings
-                  span Earnings
-                  br
-                  br
+                h1.subheading Earnings
                 span.Overall Carpark Yellow:
                 span.Amount £1050
                 img.imgBox(src='/img/image.jpg', alt='image')
@@ -104,7 +97,7 @@ html(lang='en')
             .swiper-button-prev(data-thq='slider-button-prev')
             .swiper-button-next(data-thq='slider-button-next')
           .userCon
-            h1.usrTitle User Management
+            h1.subheading User Management
             input.search.input(type='text', placeholder='Registration Plate')
             span.home-text31
               span Customer: jack daniels
@@ -120,27 +113,27 @@ html(lang='en')
         .msgCon
           h2.msgTitle Messages
           ul.home-ul.list
-            li.msgli.list-item
+            .msgli.list-item
               img.msgimg(src='/img/image.jpg', alt='image')
               span.Sender Sender
               span.Subject Subject
-            li.msgli.list-item
+            .msgli.list-item
               img.msgimg(src='/img/image.jpg', alt='image')
               span.Sender Sender
               span.Subject Subject
-            li.msgli.list-item
+            .msgli.list-item
               img.msgimg(src='/img/image.jpg', alt='image')
               span.Sender Sender
               span.Subject Subject
-            li.msgli.list-item
+            .msgli.list-item
               img.msgimg(src='/img/image.jpg', alt='image')
               span.Sender Sender
               span.Subject Subject
-            li.msgli.list-item
+            .msgli.list-item
               img.msgimg(src='/img/image.jpg', alt='image')
               span.Sender Sender
               span.Subject Subject
-            li.msgli.list-item
+            .msgli.list-item
               img.msgimg(src='/img/image.jpg', alt='image')
               span.Sender Sender
               span.Subject Subject
