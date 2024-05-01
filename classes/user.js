@@ -10,8 +10,6 @@ class User{
         this.#userName = userName;
         this.#password = password;   //this part subject to change
         this.#phoneNumber = phoneNumber;
-        
-
     }
     
 }

@@ -3,13 +3,26 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const calc = require('./controllers/userController')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { userController } = require('./controllers/userController');
+// const { default: DBManager } = require('./controllers/DBManager');
+// const { default: userController } = require('./controllers/userController');
 
-// variables and cosntants
+
+// variables and constants
 var app = express();
 const port = 3000;
+// var dbm = new DBManager();
+// console.log(dbm)
+// var USC = new userController();
+// USC.connectionTest;
+// console.log(dmb);
+var USC = userController;
+calc.add
+
 
 // view engine setup
 app.set('view engine', 'pug');
