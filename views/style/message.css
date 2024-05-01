@@ -15,7 +15,7 @@
 @media (max-width: 768px) {
   .RightBox, .LeftBox, .home-ul {
     flex-direction: column;
-    width: 95%;
+    width: 50%;
     margin: 10px auto;
   }
 
@@ -25,12 +25,12 @@
   }
 
   .adminBtn, .home-button1 {
-    width: 90%;
+    width: 50%;
     margin: 10px auto;
   }
 
   .msgText, .writeMsg {
-    width: 85%;
+    width: 50%;
     padding: 15px;
   }
 }
