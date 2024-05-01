@@ -101,7 +101,7 @@
 
 .msgli {
   width:95%;
-  min-height: 90px;
+  min-height: 120px; /*Adjusted height*/
   display: flex;
   position: relative;
   align-items: center;
@@ -116,34 +116,35 @@
 
 }
 .msgimg {
-  top: 0px;
-  left: 0px;
   width: 74px;
-  bottom: 0px;
   height: 66px;
   position: absolute;
-  margin-top: auto;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   object-fit: cover;
-  margin-left: 20px;
-  margin-right: auto;
-  margin-bottom: auto;
 }
-.Sender {
-  top: 0px;
-  right: 0px;
-  width: 80%;
-  margin: 18px;
-  margin-left: 8px;
+
+.Sender, .Subject {
   position: absolute;
+  left: 110px; 
+  right: 20px; 
+  height: calc(50% - 60px); /* Adjusted height */
+  font-size: calc(1vw + 1vh); /* Scaled font size */
+}
+
+.Sender {
+  top: 20px;
+  height: calc(50% - 40px);
+  width: auto; 
   border-radius: 16px;
   background-color: rgb(255, 255, 255);
 }
+
 .Subject {
-  right: 0px;
-  width: 80%;
-  bottom: 0px;
-  margin: 18px;
-  position: absolute;
+  bottom: 20px; 
+  height: calc(50% - 40px); 
+  width: auto; 
   border-radius: 16px;
   background-color: rgb(255, 255, 255);
 }
@@ -161,8 +162,7 @@
   background-color: #cfe4ff;
   margin-top:16px;
   box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px;
-
-
+  height: 736px; /* Increased height */
 }
 .msgText, .writeMsg {
   width: 90%;
@@ -195,6 +195,34 @@
   margin-right: auto;
   margin-bottom: 2%;
   background-color: rgb(53, 120, 171);
+}
+
+.adminBtn, .home-button1 {
+  width: 90%;
+  height: auto; 
+  position: relative; 
+  margin: 20px auto;
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: #3578ab;
+  color: #ffffff; 
+  text-align: center; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  cursor: pointer; 
+  border: none; 
+}
+
+
+.RightBox, .LeftBox {
+  position: relative; 
+  padding-bottom: 80px; 
+}
+
+.RightBox .adminBtn, .LeftBox .home-button1 {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%); 
 }
 
 input {
