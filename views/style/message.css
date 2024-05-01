@@ -197,6 +197,34 @@
   background-color: rgb(53, 120, 171);
 }
 
+.adminBtn, .home-button1 {
+  width: 90%;
+  height: auto; 
+  position: relative; 
+  margin: 20px auto;
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: #3578ab;
+  color: #ffffff; 
+  text-align: center; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  cursor: pointer; 
+  border: none; 
+}
+
+
+.RightBox, .LeftBox {
+  position: relative; 
+  padding-bottom: 80px; 
+}
+
+.RightBox .adminBtn, .LeftBox .home-button1 {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
 input {
   all: unset;
 }
