@@ -1,24 +1,14 @@
 /*Base styles*/
-.msgimg {
-  width: 15%;
-  height: auto; 
-  position: absolute; 
-  left: 10px; 
-  top: 50%;
-  transform: translateY(-50%); 
+.composeMsg, .home-ul, .RightBox, .LeftBox {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px;
 }
 
-.Sender, .Subject {
-  margin-left: 25%;
-  width: 70%; 
-  display: block; 
-  margin-bottom: 10px; 
-}
-
-.msgli {
-  position: relative; 
-  padding: 10px;
-  min-height: 80px; 
+.msgli, .Sender, .Subject {
+  width: 90%;
+  margin: 10px auto;
 }
 
 /*Media Queries */
