@@ -401,7 +401,7 @@
   }
 
   /*button overlap fix*/
-  .msgadmin, .home-button1, .moremsg {
+  .msgadmin, .home-button1, .moremsg, .prevtrans, .addwallet {
     width: 90%;
     height: auto; 
     position: relative; 
