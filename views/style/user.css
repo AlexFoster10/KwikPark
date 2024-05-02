@@ -232,7 +232,7 @@
   }
   
   
-
+/*cleaned up wallet*/
   .wallet {
     background-color: #cfe4ff;
     border-radius: 8px;
@@ -253,6 +253,24 @@
   .wallet .amount {
     font-weight: bold;
   }
+
+  button.prevTrans, button.addToWallet {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #3578ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button.prevTrans:hover, button.addToWallet:hover {
+    background-color: #28597a;
+  }
+
+
+  
   
   .home-slider-pagination1 {
     display: block;
