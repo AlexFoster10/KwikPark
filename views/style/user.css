@@ -1,34 +1,26 @@
 /*Media Queries */
 @media (max-width: 768px) {
   .bottom {
-    flex-direction: column; /* Stack vertically */
-    align-items: center; /* Center align the items */
+    flex-direction: column; /* Ensure children stack vertically */
+    align-items: center; /* Center-align the items for consistency */
+    width: 100%; /* Use the full width available */
+    margin: 0 auto; /* Center the bottom container */
+    padding: 10px 0; /* Add some padding around the items */
   }
 
   .Left, .msgCon {
-    width: 100%; /* Full width */
-    display: block; /* Stack as blocks */
+    width: 100%; /* Both sections should take full width */
+    display: flex; /* Maintains internal flex layouts */
+    flex-direction: column; /* Ensures internal items also stack vertically */
+    margin-bottom: 20px; /* Adds space between the sections */
   }
 
-  .RightBox, .LeftBox, .home-ul {
-    flex-direction: column;
-    width: 100%;
-    margin: 10px auto;
+  .msgCon {
+    order: 2; /* Ensure messages come after the vehicle and wallet sections */
   }
 
-  .SubHeading {
-    font-size: 24px;
-    margin-top: 10px;
-  }
-
-  .adminBtn, .home-button1 {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  .msgText, .writeMsg {
-    width: 85%;
-    padding: 15px;
+  .Left {
+    order: 1; /* Ensures this section comes first */
   }
 }
 
