@@ -401,7 +401,7 @@
   }
 
   /*button overlap fix*/
-  .adminBtn, .home-button1 {
+  .msgadmin, .home-button1 {
     width: 90%;
     height: auto; 
     position: relative; 
@@ -422,13 +422,13 @@
     padding-bottom: 80px; 
   }
   
-  .RightBox .adminBtn, .LeftBox .home-button1 {
+  .RightBox .msgadmin, .LeftBox .home-button1 {
     position: absolute;
     bottom: 20px; 
     left: 50%;
     transform: translateX(-50%); 
   }
-  
+
   
   .popup-form-container {
     display: none; /* Hide the form by default */
