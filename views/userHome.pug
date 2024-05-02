@@ -112,11 +112,13 @@ html(lang='en')
             .swiper-button-prev(data-thq='slider-button-prev')
             .swiper-button-next(data-thq='slider-button-next')
           .userCon
-            h1.usrTitle Wallet
-              span.Overall Balance:
-              span.Amount £54
-                button.prevtrans(type='button') Previous transactions
-                button.addwallet(type='button') Add to wallet
+            .wallet
+              h1.walletTitle Wallet
+              div.walletBalance
+                span Balance:
+                span.amount £54
+              button.prevTrans(type='button') Previous transactions
+              button.addToWallet(type='button') Add to wallet
         .msgCon
           h2.msgTitle Messages
           ul.home-ul.list

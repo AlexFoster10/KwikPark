@@ -233,16 +233,25 @@
   
   
 
-  .Amount, .Overall {
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    margin: auto;
-    position: absolute;
-    font-size: 90px;
-    align-self: center;
+  .wallet {
+    background-color: #cfe4ff;
+    border-radius: 8px;
+    padding: 10px;
     text-align: center;
+  }
+  
+  .walletTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .walletBalance {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .wallet .amount {
+    font-weight: bold;
   }
   
   .home-slider-pagination1 {
