@@ -233,6 +233,13 @@
   
   
 /*cleaned up wallet*/
+
+  .userCon {
+    padding: 20px;
+    margin: auto; 
+    max-width: 600px; 
+  }
+
   .wallet {
     background-color: #cfe4ff;
     border-radius: 8px;
