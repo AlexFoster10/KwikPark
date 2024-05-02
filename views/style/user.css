@@ -41,6 +41,17 @@
     flex-grow: 1;
     overflow: visible; 
   }
+
+  div.bottom > .Left, div.bottom > .msgCon {
+    min-height: auto; 
+    flex-grow: 1; 
+  }
+
+  .bottom, .Left, .msgCon {
+    float: none;
+    position: relative; 
+    clear: both;
+  }
 }
 
 
