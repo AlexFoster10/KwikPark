@@ -242,7 +242,7 @@
     margin-top: 64px;
     text-align: center;
   }
-  .Amount {
+  .Amount, .Overall {
     top: 0px;
     left: 0px;
     right: 0px;
