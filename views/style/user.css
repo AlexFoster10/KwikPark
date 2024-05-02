@@ -232,16 +232,7 @@
   }
   
   
-  .Overall {
-    top: 0px;
-    left: 100px;
-    right: 100px;
-    position: absolute;
-    font-size: 40px;
-    align-self: center;
-    margin-top: 64px;
-    text-align: center;
-  }
+
   .Amount, .Overall {
     top: 0px;
     left: 0px;
