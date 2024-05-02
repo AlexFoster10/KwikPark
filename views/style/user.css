@@ -336,41 +336,51 @@
     padding-bottom: 0px;
   }
   .msgli {
-    height: 90px;
-    margin: 16px;
+    width:95%;
+    min-height: 120px; /*Adjusted height*/
+    display: flex;
     position: relative;
-    border-radius: 16px;
+    align-items: center;
+    border-color: #000000;
+    border-width: 1px;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: flex-start;
     background-color: #cfe4ff;
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px;
+    margin-bottom:28px;
+  
   }
   .msgimg {
-    top: 0px;
-    left: 0px;
     width: 74px;
-    bottom: 0px;
     height: 66px;
     position: absolute;
-    margin-top: auto;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     object-fit: cover;
-    margin-left: 20px;
-    margin-right: auto;
-    margin-bottom: auto;
   }
-  .Sender {
-    top: 0px;
-    right: 0px;
-    width: 80%;
-    margin: 18px;
-    margin-left: 8px;
+  
+  .Sender, .Subject {
     position: absolute;
+    left: 110px; 
+    right: 20px; 
+    height: calc(50% - 60px); /* Adjusted height */
+    font-size: calc(1vw + 1vh); /* Scaled font size */
+  }
+  
+  .Sender {
+    top: 20px;
+    height: calc(50% - 40px);
+    width: auto; 
     border-radius: 16px;
     background-color: rgb(255, 255, 255);
   }
+  
   .Subject {
-    right: 0px;
-    width: 80%;
-    bottom: 0px;
-    margin: 18px;
-    position: absolute;
+    bottom: 20px; 
+    height: calc(50% - 40px); 
+    width: auto; 
     border-radius: 16px;
     background-color: rgb(255, 255, 255);
   }
