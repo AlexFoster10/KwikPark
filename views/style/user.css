@@ -384,7 +384,7 @@
     left: 110px; 
     right: 20px; 
     height: calc(50% - 60px); /* Adjusted height */
-    font-size: max(4px, calc(1vw + 1vh)); /* Ensures font size doesn't exceed max */
+    font-size: clamp(1px, 1vw + 1vh, 2px); /* Scalable font size with max limit */
   }
   
   .Sender {
