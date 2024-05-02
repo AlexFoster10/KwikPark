@@ -1,8 +1,18 @@
 /*Media Queries */
 @media (max-width: 768px) {
+  .bottom {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center align the items */
+  }
+
+  .Left, .msgCon {
+    width: 100%; /* Full width */
+    display: block; /* Stack as blocks */
+  }
+
   .RightBox, .LeftBox, .home-ul {
     flex-direction: column;
-    width: 95%;
+    width: 100%;
     margin: 10px auto;
   }
 
