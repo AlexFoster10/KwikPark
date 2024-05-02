@@ -266,7 +266,12 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
+  /* Adds horizontal spacing between buttons */
+  .walletButtons button {
+    margin: 0 5px;
+  }
+
   button.prevTrans:hover, button.addToWallet:hover {
     background-color: #28597a;
   }
