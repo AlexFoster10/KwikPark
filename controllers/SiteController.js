@@ -1,3 +1,7 @@
+// imports
+const { DBManager } = require('./DBManager.js');
+
+
 class SiteController{
     #parkingLots = [];
 
@@ -18,3 +22,5 @@ class SiteController{
 
 
 }
+
+module.exports = {SiteController}

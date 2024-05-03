@@ -1,3 +1,5 @@
+
+
 class User{
     #email = "";
     #userName = "";
@@ -14,4 +16,5 @@ class User{
     
 }
 
-
+//exports
+module.exports = {User};

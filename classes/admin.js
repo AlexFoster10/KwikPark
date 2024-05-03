@@ -9,3 +9,5 @@ checkLotStatus(parkingLot){
 
 
 }
+
+module.exports 

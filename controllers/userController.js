@@ -1,5 +1,7 @@
 
 const { DBManager } = require('./DBManager.js');
+const { vehicle } = require('./classes/Vehicle.js')
+
 
 class UserController{
     constructor(){
@@ -11,12 +13,10 @@ class UserController{
         DBManager.testIncrement();
     }
 
-    //account creation
-    createAccount(email,userName,password,phoneNumber){
-        
-
+    
+    addVehicleToAccount(targetAccount,vehicle){
+        targetAccount.addVehicle(vehicle);
     }
-
 
     //login checking
     login(email,password){
