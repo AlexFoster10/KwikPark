@@ -5,9 +5,7 @@
 // this controler should be used to check passwords and emails
 class userController{
 
-    exports
-
-
+   
     constructor(){
         
         DBM.testIncrement;
