@@ -5,14 +5,15 @@
 // this controler should be used to check passwords and emails
 class userController{
 
-   
+
+
     constructor(){
         
-        DBM.testIncrement;
+        
     }
 
     connectionTest(){
-        this.dbm.testIncrement();
+        DBManager.testIncrement();
     }
 
     //account creation
@@ -30,6 +31,4 @@ class userController{
 
 }
 
-
-
-// 
+module.exports = {UserController}
