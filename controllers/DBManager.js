@@ -1,15 +1,16 @@
 const { map } = require("../app");
+
+
 class DBManager{
 
    static testNum = 0;
+   //static userMap = new map;
 
-    constructor(){
-        const userMap = new map;
-        
+    constructor(){ 
     }
 
     static checkUser(email){
-        if(email in userMap){
+        if(email in this.userMap){
             return true;
         }
     }
@@ -17,7 +18,13 @@ class DBManager{
     static testIncrement(){
         this.testNum ++;
     }
+
+    static getTestNum(){
+        return this.testNum;
+    }
     
 
 
 }
+
+module.exports = {DBManager}

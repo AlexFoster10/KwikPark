@@ -1,20 +1,14 @@
 
-// exports.testIncrement = function (){
-//     temp = new 
-//     };
-// this controler should be used to check passwords and emails
-class userController{
+const { DBManager } = require('./DBManager.js');
 
-    exports
-
-
+class UserController{
     constructor(){
         
-        DBM.testIncrement;
+        
     }
 
     connectionTest(){
-        this.dbm.testIncrement();
+        DBManager.testIncrement();
     }
 
     //account creation
@@ -32,6 +26,4 @@ class userController{
 
 }
 
-
-
-// 
+module.exports = {UserController}
