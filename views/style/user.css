@@ -305,13 +305,12 @@
     background-color: #28597a;
   }
 
-
-/*Fixes burger visibility*/
-.dropdown {
+  .dropdown {
     position: relative;
     display: inline-block;
 }
 
+/*Fixes burger visibility*/
 .dropdown-content {
     display: none;
     position: absolute;
