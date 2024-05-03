@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
   head
-    title KwikPark Messege
+    title KwikPark Message
     meta(property="og:title", content="Likable Juicy Lyrebird")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     style
@@ -13,12 +13,12 @@ html(lang="en")
         img.logo(src="/img/image.jpg", alt="image")
         h1.title KwikPark
         .dropdown
-          .dropdown-content
-            a(href='/admin') Admin
-            a(href='/userHome') User Home
-            a(href='/login') Login
-            a(href='/message') Message
           button.burger-icon ☰
+        .dropdown-content.hidden
+          a(href='/admin') Admin
+          a(href='/userHome') User Home
+          a(href='/login') Login
+          a(href='/message') Message
       h1.pageTitle Messages
       .Layout
         .RightBox

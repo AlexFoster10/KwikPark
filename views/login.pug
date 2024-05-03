@@ -6,19 +6,18 @@ html
       include style/style.css
       include style/signup.css
 
-
   body
     .page
       .header
         img.logo(src="/img/image.jpg", alt="image")
         h1.title KwikPark
         .dropdown
-          .dropdown-content
-            a(href='/admin') Admin
-            a(href='/userHome') User Home
-            a(href='/login') Login
-            a(href='/message') Messege
           button.burger-icon ☰
+        .dropdown-content.hidden
+          a(href='/admin') Admin
+          a(href='/userHome') User Home
+          a(href='/login') Login
+          a(href='/message') Message
       h1.subHeading Login
       .main
         form.form(action="/signup", method="POST")
@@ -39,5 +38,3 @@ html
          button.NewUsr New User
         a(href="/login", class="fPwd") 
          button.fPwd Forgot Password
-
-
