@@ -6,19 +6,18 @@ html
       include style/style.css
       include style/signup.css
 
-
   body
     .page
       .header
         img.logo(src="/img/KwikPark_transparent.png" alt="est. 2024" )
         h1.title KwikPark
         .dropdown
-          .dropdown-content
-            a(href='/admin') Admin
-            a(href='/userHome') User Home
-            a(href='/login') Login
-            a(href='/message') Messege
           button.burger-icon ☰
+        .dropdown-content.hidden
+          a(href='/admin') Admin
+          a(href='/userHome') User Home
+          a(href='/login') Login
+          a(href='/message') Message
       h1.subHeading Sign Up
       .main
         form.form(id="myForm", action="", onsubmit="return signupForm()")

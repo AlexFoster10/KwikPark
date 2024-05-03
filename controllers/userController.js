@@ -1,9 +1,8 @@
-// imports
+
 const { DBManager } = require('./DBManager.js');
 const { vehicle } = require('./classes/Vehicle.js')
 
 
-//content 
 class UserController{
     constructor(){
         
