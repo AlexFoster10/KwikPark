@@ -93,10 +93,3 @@ document.addEventListener('DOMContentLoaded', function() {
     slider2NextButton.addEventListener('click', nextSlider2Slide);
     slider2PrevButton.addEventListener('click', prevSlider2Slide);
 });
-
-// Burger fix attempt
-$(document).ready(function() {
-    $(".burger-icon").on("click", function() {
-        $(".dropdown-content").toggleClass("hidden");
-    });
-});
