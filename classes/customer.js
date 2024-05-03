@@ -1,7 +1,9 @@
 //imports
-const {User} = import('./User.js')
+const {User} = require('./User.js');
+
 
 class Customer extends User{
+    super;
     #bal = 0;
     #cars = [];
     #badgeholder = false;
@@ -25,6 +27,12 @@ toggleBadge(){
     else{
         this.#badgeholder = true;
     }
+}
+
+toString(){
+    console.log(this.getEmail());
+    console.log(this.getUsername());
+    console.log(this.getPhoneNumber());
 }
 
 }

@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const calc = require('./controllers/UserController.js')
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -14,6 +14,7 @@ const port = 3000;
 
 const { UserController } = require('./controllers/UserController.js');
 const { DBManager } = require('./controllers/DBManager.js');
+const { User } = require('./classes/User.js');
 
 // view engine setup
 app.set('view engine', 'pug');
@@ -92,9 +93,42 @@ app.listen(port, () => {
 
 var userController = new UserController();
 
-console.log(DBManager.getTestNum());
-userController.connectionTest();
-console.log(DBManager.getTestNum());
+// console.log(DBManager.getTestNum());
+// userController.connectionTest();
+// console.log(DBManager.getTestNum());
+
+userController.newCustomer("email@email.com","usernamer","password123","01273557132");
+//console.log(DBManager.customerMapSize());
+let test = DBManager.checkCustomerAccountExists("email@email.com");
+test.toString();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 module.exports = app;
 
 //Notes

@@ -1,5 +1,4 @@
 
-
 class User{
     #email = "";
     #userName = "";
@@ -12,6 +11,18 @@ class User{
         this.#userName = userName;
         this.#password = password;   //this part subject to change
         this.#phoneNumber = phoneNumber;
+    }
+
+    getEmail(){
+        return this.#email;
+    }
+    
+    getUsername(){
+        return this.#userName;
+    }
+
+    getPhoneNumber(){
+        return this.#phoneNumber;
     }
     
 }

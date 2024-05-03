@@ -311,7 +311,6 @@
     position: relative;
     display: inline-block;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -325,9 +324,7 @@
 .dropdown-content:hover {
     display: block;
 }
-
-.hidden {
-    display: none;
+   display: none;
 }
 
 
