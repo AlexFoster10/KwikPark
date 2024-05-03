@@ -95,9 +95,9 @@ var userController = new UserController();
 console.log(DBManager.getTestNum());
 userController.connectionTest();
 console.log(DBManager.getTestNum());
-
-
-
-
-
 module.exports = app;
+
+//Notes
+
+//  Dont know what module.exports.app is could someone please
+//  explain it - Matt

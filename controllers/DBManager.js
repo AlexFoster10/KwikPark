@@ -1,6 +1,7 @@
 const { map } = require("../app");
+//imports
 
-
+//content 
 class DBManager{
 
    static testNum = 0;
@@ -15,6 +16,7 @@ class DBManager{
         }
     }
 
+    //testfunctions
     static testIncrement(){
         this.testNum ++;
     }
@@ -26,5 +28,7 @@ class DBManager{
 
 
 }
-
+//exports
 module.exports = {DBManager}
+
+//Notes

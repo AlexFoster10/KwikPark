@@ -1,12 +1,13 @@
-
+// imports
 const { DBManager } = require('./DBManager.js');
 
+//content 
 class UserController{
     constructor(){
         
         
     }
-
+    //testing
     connectionTest(){
         DBManager.testIncrement();
     }
@@ -25,5 +26,7 @@ class UserController{
 
 
 }
-
+//exports 
 module.exports = {UserController}
+
+//Notes
