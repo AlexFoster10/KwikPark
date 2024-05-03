@@ -19,12 +19,12 @@ html(lang='en')
         img.logo(src="/img/KwikPark_transparent.png" alt="est. 2024" )
         h1.title KwikPark
         .dropdown
-          .dropdown-content
-            a(href='/admin') Admin
-            a(href='/userHome') User Home
-            a(href='/login') Login
-            a(href='/message') Message
           button.burger-icon ☰
+        .dropdown-content.hidden
+          a(href='/admin') Admin
+          a(href='/userHome') User Home
+          a(href='/login') Login
+          a(href='/message') Message
       .main
         h1.pageTitle Admin Home Page
       .home-slider.swiper(data-thq='slider', data-pagination='true', data-navigation='true', data-autoplay='false')

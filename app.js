@@ -3,26 +3,17 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const calc = require('./controllers/userController')
+const calc = require('./controllers/UserController.js')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const { userController } = require('./controllers/userController');
-// const { default: DBManager } = require('./controllers/DBManager');
-// const { default: userController } = require('./controllers/userController');
 
-
-// variables and constants
 var app = express();
 const port = 3000;
-// var dbm = new DBManager();
-// console.log(dbm)
-// var USC = new userController();
-// USC.connectionTest;
-// console.log(dmb);
-var USC = userController;
-calc.add
 
+
+const { UserController } = require('./controllers/UserController.js');
+const { DBManager } = require('./controllers/DBManager.js');
 
 // view engine setup
 app.set('view engine', 'pug');
@@ -96,5 +87,17 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}!`);
 });
 
+//===========================================================//
+// Main
 
+var userController = new UserController();
+
+console.log(DBManager.getTestNum());
+userController.connectionTest();
+console.log(DBManager.getTestNum());
 module.exports = app;
+
+//Notes
+
+//  Dont know what module.exports.app is could someone please
+//  explain it - Matt
