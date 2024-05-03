@@ -1,3 +1,6 @@
+//imports
+const {User} = import('./User.js')
+
 class Customer extends User{
     #bal = 0;
     #cars = [];
@@ -25,3 +28,6 @@ toggleBadge(){
 }
 
 }
+
+//exports
+module.exports = {Customer}

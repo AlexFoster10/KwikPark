@@ -1,11 +1,11 @@
-const { map } = require("../app");
 //imports
+const {User} = import('./classes/User.js');
 
 //content 
 class DBManager{
 
    static testNum = 0;
-   //static userMap = new map;
+   static userMap = new Map();
 
     constructor(){ 
     }
@@ -25,6 +25,16 @@ class DBManager{
         return this.testNum;
     }
     
+    //account creation
+    Customer createAccountCustomer(email,userName,password,phoneNumber){
+        var temp = new Customer(email, userName, password, phoneNumber);
+        return temp;
+    }
+    
+    Admin createAccountAdmin(email,userName,password,phoneNumber){
+        var temp = new Admin(email,userName,password,phoneNumber);
+        return temp;
+    }
 
 
 }
