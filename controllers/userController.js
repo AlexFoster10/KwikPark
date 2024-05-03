@@ -6,7 +6,7 @@ class UserController{
         
         
     }
-
+    //testing
     connectionTest(){
         DBManager.testIncrement();
     }
@@ -25,5 +25,7 @@ class UserController{
 
 
 }
-
+//exports 
 module.exports = {UserController}
+
+//Notes
