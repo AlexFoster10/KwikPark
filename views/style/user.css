@@ -36,10 +36,13 @@
     margin-bottom: 30px; 
     padding: 10px 0;
     box-sizing: border-box; 
+    position: relative;
   }
 
   .msgCon {
     order: 2;
+    top: auto;
+    right: auto;
   }
 
   .Left {
