@@ -94,4 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
     slider2PrevButton.addEventListener('click', prevSlider2Slide);
 });
 
-
+// Burger fix attempt
+$(document).ready(function() {
+    $(".burger-icon").on("click", function() {
+        $(".dropdown-content").toggleClass("hidden");
+    });
+});
