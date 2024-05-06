@@ -262,17 +262,28 @@
 /* Common styles for both .home-slider1 and .userCon */
 .home-slider1,
 .userCon {
-  width: 95%;
-  height: 50%;
-  border-radius: 16px;
-  background-color: #cfe4ff;
-  padding: 20px;
   display: flex;
-  flex-direction: column; /* Arrange content in a column */
-  align-items: center; /* Center content horizontally */
-  justify-content: flex-start; /* Align content to the top */
-  margin: 20px;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f0f0f0; 
+}
+
+.textContainer {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.imgBox {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px; 
 }
 
 /* Specific styles for .home-slider1 */
@@ -317,10 +328,7 @@
   border: 1px solid #ccc; /* Added border for input field */
   border-radius: 5px; /* Rounded corners for input field */
 }
-.home-text31 {
-  width: 85%;
-  font-size: 25px;
-}
+
 .imgBox {
   left: 0px;
   right: 0px;
