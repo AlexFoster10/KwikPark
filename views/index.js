@@ -93,3 +93,19 @@ document.addEventListener('DOMContentLoaded', function() {
     slider2NextButton.addEventListener('click', nextSlider2Slide);
     slider2PrevButton.addEventListener('click', prevSlider2Slide);
 });
+
+//Burger visibility fix
+document.addEventListener('DOMContentLoaded', () => {
+    const burgerIcon = document.querySelector('.burger-icon');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    burgerIcon.addEventListener('click', () => {
+        dropdownContent.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.dropdown') && !event.target.closest('.dropdown-content')) {
+            dropdownContent.classList.add('hidden');
+        }
+    });
+});
