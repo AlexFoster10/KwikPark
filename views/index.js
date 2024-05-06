@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     slider2PrevButton.addEventListener('click', prevSlider2Slide);
 });
 
+//Toggle burger visibility
 document.addEventListener("DOMContentLoaded", function() {
     var burger = document.querySelector('.burger-icon');
     var dropdownContent = document.querySelector('.dropdown-content');
