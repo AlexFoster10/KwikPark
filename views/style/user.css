@@ -52,20 +52,6 @@
 }
 
 /*Burger visibility*/
-.dropdown {
-  position: relative;  
-  z-index: 1000; 
-}
-
-.dropdown-content {
-  display: none; 
-  position: absolute; 
-  top: 100%;
-  left: 0; 
-  background-color: #ffffff; 
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
-  width: 200px; 
-}
 
 
   .main {
