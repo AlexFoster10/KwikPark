@@ -93,16 +93,3 @@ document.addEventListener('DOMContentLoaded', function() {
     slider2NextButton.addEventListener('click', nextSlider2Slide);
     slider2PrevButton.addEventListener('click', prevSlider2Slide);
 });
-
-$(document).ready(function(){
-    $('.burger-icon, .dropdown-content').hover(function() {
-      $('.dropdown-content').stop(true, true).slideDown('fast');
-    }, function() {
-      
-      setTimeout(function() {
-        if (!$('.burger-icon:hover').length && !$('.dropdown-content:hover').length) {
-          $('.dropdown-content').slideUp('fast');
-        }
-      }, 400);
-    });
-  });
