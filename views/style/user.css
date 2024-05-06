@@ -51,12 +51,7 @@
   }
 }
 
-/*Burger hover fix*/
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
+/*Burger visibility*/
 .dropdown-content {
   display: none;
   position: absolute;
@@ -66,13 +61,8 @@
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content,
-.dropdown-content:hover {
+.dropdown:hover .dropdown-content {
   display: block;
-}
-
-.hidden {
-  display: none;
 }
 
 
