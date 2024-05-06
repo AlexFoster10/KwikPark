@@ -93,3 +93,24 @@ document.addEventListener('DOMContentLoaded', function() {
     slider2NextButton.addEventListener('click', nextSlider2Slide);
     slider2PrevButton.addEventListener('click', prevSlider2Slide);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var burger = document.querySelector('.burger-icon');
+    var dropdownContent = document.querySelector('.dropdown-content');
+  
+    burger.addEventListener('click', function() {
+      // Toggle visibility
+      if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+      } else {
+        dropdownContent.style.display = 'block';
+      }
+    });
+  
+    // Optional: Close dropdown when clicking elsewhere on the page
+    window.addEventListener('click', function(e) {
+      if (!burger.contains(e.target) && !dropdownContent.contains(e.target)) {
+        dropdownContent.style.display = 'none';
+      }
+    });
+  });
