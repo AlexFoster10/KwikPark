@@ -13,7 +13,7 @@
 
 /*Media Queries */
 @media (max-width: 768px) {
-  .RightBox, .LeftBox, .home-ul {
+  .LeftBox, .RightBox, .home-ul {
     flex-direction: column;
     width: 95%;
     margin: 10px auto;
@@ -34,7 +34,7 @@
     padding: 15px;
   }
 
-  div.bottom {
+  .Layout {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,24 +43,24 @@
     padding-bottom: 20px;
   }
 
-  div.bottom > .Left, div.bottom > .msgCon {
+  .Layout > .LeftBox, .Layout > .RightBox {
     width: 100%;
-    display: block; 
-    margin-bottom: 30px; 
+    display: block;
+    margin-bottom: 30px;
     padding: 10px 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     position: relative;
   }
 
-  .msgCon {
-    order: 2;
+  .RightBox {
+    order: 2;  /* Ensures the message list is below the compose box */
     top: auto;
     right: auto;
   }
 
-  .Left {
-    order: 1; 
-    padding-bottom: 20px; 
+  .LeftBox {
+    order: 1;  /* Ensures the compose box is above the message list */
+    padding-bottom: 20px;
   }
 }
 
