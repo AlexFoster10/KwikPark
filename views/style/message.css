@@ -62,14 +62,6 @@
     order: 1;  /* Ensures the compose box is above the message list */
     padding-bottom: 20px;
   }
-
-  .home-ul.list .msgli.list-item:last-child {
-    margin-bottom: 50px;  /* Adds additional space below the last message */
-  }
-
-  .adminBtn {
-    margin-top: 20px; /* Ensures there is space above the button, if not already set */
-  }
 }
 
 /*Reposition burger menu*/
