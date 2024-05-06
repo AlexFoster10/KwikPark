@@ -24,3 +24,4 @@ lot.populate(1,3)
 console.log(lot);
 
 admin.checkLotStatus(lot);
+
