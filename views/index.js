@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   
-    // Optional: Close dropdown when clicking elsewhere on the page
     window.addEventListener('click', function(e) {
       if (!burger.contains(e.target) && !dropdownContent.contains(e.target)) {
         dropdownContent.style.display = 'none';
