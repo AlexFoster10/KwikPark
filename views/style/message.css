@@ -62,6 +62,14 @@
     order: 1;  /* Ensures the compose box is above the message list */
     padding-bottom: 20px;
   }
+
+  .home-ul.list {
+    padding-bottom: 50px;  /* Adds padding to the bottom of the entire message list */
+  }
+
+  .adminBtn {
+    margin-top: 20px; /* Extra precaution to ensure space above the button */
+  }
 }
 
 /*Reposition burger menu*/
