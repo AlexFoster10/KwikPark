@@ -60,7 +60,6 @@
 .dropdown-content {
   background-color: #f9f9f9;
   min-width: 160px; /*min-width for dropdown items*/
-  top: 100%; /* This pushes the dropdown below the burger icon */
 }
 
   .main {
