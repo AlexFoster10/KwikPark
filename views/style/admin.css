@@ -262,22 +262,17 @@
 /* Common styles for both .home-slider1 and .userCon */
 .home-slider1,
 .userCon {
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: flex-start; 
+  width: 95%;
+  height: 50%;
+  border-radius: 16px;
+  background-color: #cfe4ff;
   padding: 20px;
-  width: 100%; 
-  max-width: 600px; 
-  margin: auto; 
-}
-
-.imgBox {
-  width: 100%; 
-  height: auto; 
-  max-height: 200px; 
-  object-fit: contain; 
-  margin-bottom: 20px; 
+  display: flex;
+  flex-direction: column; /* Arrange content in a column */
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-start; /* Align content to the top */
+  margin: 20px;
+  position: relative;
 }
 
 /* Specific styles for .home-slider1 */
@@ -326,7 +321,17 @@
   width: 85%;
   font-size: 25px;
 }
-
+.imgBox {
+  left: 0px;
+  right: 0px;
+  width: 150px;
+  bottom: 0px;
+  height: 150px;
+  margin: auto;
+  position: absolute;
+  object-fit: cover;
+  padding-bottom: 8px;
+}
 .msgCon {
   top: 0px;
   flex: 0 0 auto;
