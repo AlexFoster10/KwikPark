@@ -58,17 +58,9 @@
 }
 
 .dropdown-content {
-  position: absolute;
   background-color: #f9f9f9;
   min-width: 160px; /*min-width for dropdown items*/
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
   top: 100%; /* This pushes the dropdown below the burger icon */
-  left: 0; /* Aligns dropdown with the left edge of the burger icon */
-}
-
-.dropdown:hover .dropdown-content {
-  display: block; /* Show dropdown menu on hover */
 }
 
   .main {
