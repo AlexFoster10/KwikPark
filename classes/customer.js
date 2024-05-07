@@ -33,6 +33,7 @@ toString(){
     console.log(this.getEmail());
     console.log(this.getUsername());
     console.log(this.getPhoneNumber());
+    console.log(this.getPassword());
 }
 
 }

@@ -1,10 +1,10 @@
-// //const Bcrypt = require('bcrypt');
+// const Bcrypt = require('bcrypt');
 
-
-// //Bcrypt.genSalt(saltRounds,(err,salt) =>{
-//   //  if(err){
-//     //    return;    
-//     //}
+// Bcrypt.genSalt(saltRounds,(err,salt) =>{
+//     if(err){
+//         return;    
+//     }
+    
 //     return salt;
 // })
 // Bcrypt.hash(userPassword,salt,(err,hash)=>{

@@ -24,6 +24,10 @@ class User{
     getPhoneNumber(){
         return this.#phoneNumber;
     }
+
+    getPassword(){
+        return this.#password;
+    }
     
 }
 

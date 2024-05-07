@@ -47,7 +47,7 @@ class DBManager{
     static checkCustomerAccountExists(email){
         console.log(this.customerArray);
         
-        if(!this.customerArray.includes(email)){
+        if(this.customerArray.includes(email)){
             return this.searchCustomerArray(email);
         }
         else{

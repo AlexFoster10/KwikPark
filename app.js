@@ -7,6 +7,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const bcrypt = require('bcrypt');
 
 var app = express();
 const port = 3000;
@@ -15,6 +16,9 @@ const port = 3000;
 const { UserController } = require('./controllers/UserController.js');
 const { DBManager } = require('./controllers/DBManager.js');
 const { User } = require('./classes/User.js');
+
+
+var userController = new UserController();
 
 // view engine setup
 app.set('view engine', 'pug');
@@ -88,19 +92,47 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}!`);
 });
 
+//functions
+//-----------------------------------------------------------//
+
+async function newUser(){
+  var password = 'password123';
+  var encryptedPassword = userController.encrypt(password);
+  var guess = 'password123';
+  userController.newCustomer("email@email.com","usernamer","password123","01273557132");
+}
+
 //===========================================================//
 // Main
 
-var userController = new UserController();
+newUser();
+
+
+
+//var temp = userController.compare(guess, encryptedPassword)
+
+// async function hashPassword(password, password2) { // updated
+//   const salt = await bcrypt.genSalt(10)
+//   const hash = await bcrypt.hash(password, salt)
+//   const isSame = await bcrypt.compare(password2, hash) // updated
+//   console.log(isSame) // updated
+// }
+
+//hashPassword('1234','1234');
+
 
 // console.log(DBManager.getTestNum());
 // userController.connectionTest();
 // console.log(DBManager.getTestNum());
 
-userController.newCustomer("email@email.com","usernamer","password123","01273557132");
+
 //console.log(DBManager.customerMapSize());
 let test = DBManager.checkCustomerAccountExists("email@email.com");
-test.toString();
+
+
+
+
+
 
 
 
