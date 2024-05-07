@@ -9,6 +9,59 @@
   min-width: 160px; /*min-width for dropdown items*/
 }
 
+/*Media Queries */
+@media (max-width: 768px) {
+  .RightBox, .LeftBox, .home-ul {
+    flex-direction: column;
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .SubHeading {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .adminBtn, .home-button1 {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .msgText, .writeMsg {
+    width: 85%;
+    padding: 15px;
+  }
+
+  div.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  div.bottom > .Left, div.bottom > .msgCon {
+    width: 100%;
+    display: block; 
+    margin-bottom: 30px; 
+    padding: 10px 0;
+    box-sizing: border-box; 
+    position: relative;
+  }
+
+  .msgCon {
+    order: 2;
+    top: auto;
+    right: auto;
+  }
+
+  .Left {
+    order: 1; 
+    padding-bottom: 20px; 
+  }
+}
+
 .main {
   flex: 0 0 auto;
   width: 100%;
@@ -222,6 +275,17 @@
   position: relative;
 }
 
+.textContainer {
+  width: 100%; 
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.imgBox {
+  width: 150px; 
+  object-fit: cover; 
+}
+
 /* Specific styles for .home-slider1 */
 .home-slider1 {
   display: inline-block; /* Adjust display as needed */
@@ -264,10 +328,7 @@
   border: 1px solid #ccc; /* Added border for input field */
   border-radius: 5px; /* Rounded corners for input field */
 }
-.home-text31 {
-  width: 85%;
-  font-size: 25px;
-}
+
 .imgBox {
   left: 0px;
   right: 0px;
@@ -314,60 +375,80 @@
   padding-bottom: 0px;
 }
 .msgli {
-  height: 90px;
-  margin: 16px;
+  width:95%;
+  min-height: 120px; /*Adjusted height*/
+  display: flex;
   position: relative;
-  border-radius: 16px;
+  align-items: center;
+  border-color: #000000;
+  border-width: 1px;
+  border-radius: 8px;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: #cfe4ff;
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px;
+  margin-bottom:28px;
+
 }
 .msgimg {
-  top: 0px;
-  left: 0px;
   width: 74px;
-  bottom: 0px;
   height: 66px;
   position: absolute;
-  margin-top: auto;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   object-fit: cover;
-  margin-left: 20px;
-  margin-right: auto;
-  margin-bottom: auto;
 }
+
+.Sender, .Subject {
+  position: absolute;
+  left: 110px; 
+  right: 20px; 
+  height: calc(50% - 60px); /* Adjusted height */
+  font-size: clamp(12px, 1vw + 1vh, 20px); /* Scalable font size with max limit */
+}
+
 .Sender {
-  top: 0px;
-  right: 0px;
-  width: 80%;
-  margin: 18px;
-  margin-left: 8px;
-  position: absolute;
-  border-radius: 16px;
-  background-color: rgb(255, 255, 255);
-}
-.Subject {
-  right: 0px;
-  width: 80%;
-  bottom: 0px;
-  margin: 18px;
-  position: absolute;
+  top: 20px;
+  height: calc(50% - 40px);
+  width: auto; 
   border-radius: 16px;
   background-color: rgb(255, 255, 255);
 }
 
-.moremsg {
-  color: #e3e3e3;
-  width: 484px;
-  height: 66px;
-  background-color: #3578ab;
-  margin: 20px;
-  border-radius: 8px;
+.Subject {
+  bottom: 20px; 
+  height: calc(50% - 40px); 
+  width: auto; 
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
 }
-.msgadmin {
-  color: #ffffff;
-  width: 355px;
-  height: 66px;
-  margin-top: var(--dl-space-space-oneandhalfunits);
-  border-color: #ffffff;
-  background-color: #3578ab;
-  margin: 20px;
-  border-radius: 8px;
-}
+
+  /*button overlap fix*/
+  .msgadmin, .home-button1, .moremsg, .prevtrans, .addwallet {
+    width: 90%;
+    height: auto; 
+    position: relative; 
+    margin: 20px auto;
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: #3578ab;
+    color: #ffffff; 
+    text-align: center; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    cursor: pointer; 
+    border: none; 
+  }
+  
+  
+  .RightBox, .LeftBox {
+    position: relative; 
+    padding-bottom: 80px; 
+  }
+  
+  .RightBox .msgadmin, .LeftBox .home-button1 {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+  }
