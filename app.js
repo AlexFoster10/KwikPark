@@ -141,6 +141,7 @@ var messages1 = new Message(sam,bobb);
 console.log(messages1);
 messages1.sendMessage("fart123123");
 console.log(messages1);
+messages1.writeToFile();
 
 
 
