@@ -2,15 +2,21 @@ const fs = require('fs')
 const {User} = require('./user.js');
 const { callbackify } = require('util');
 class Message{
+    messageList = [];
+    sender="";
+    recipient="";
 
     constructor(user,user2){
-        messageList = [];
-        sender = user.getUserame();
-        recipient = user2.getUserame();
+        this.sender = user.getUsername();
+        this.recipient = user2.getUsername();
+    }
+
+    getMessages(){
+        return this.messageList;
     }
 
     sendMessage(text){
-        messageList.unshift(text);
+        this.messageList.unshift(text);
     }
 
     writeToFile(){
