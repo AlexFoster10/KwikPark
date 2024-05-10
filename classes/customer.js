@@ -1,5 +1,5 @@
 //imports
-const {User} = require('./User.js');
+const {User} = require('./user.js'); // i change path in here and admion from ./User to just User, if broken change back
 
 
 class Customer extends User{

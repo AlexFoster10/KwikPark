@@ -1,7 +1,7 @@
 //imports
-const { User } = require('../classes/User.js');
-const { Customer } = require('../classes/Customer.js');
-const { Admin } = require('../classes/Admin.js');
+const { User } = require('../classes/user.js');
+const { Customer } = require('../classes/customer.js');
+const { Admin } = require('../classes/admin.js');
 const { Password } = require('../classes/Password.js');
 
 

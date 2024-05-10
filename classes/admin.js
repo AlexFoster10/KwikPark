@@ -1,4 +1,4 @@
-const {User} = require('./User.js');
+const {User} = require('./user.js');
 
 class Admin extends User {
     static #level = 1

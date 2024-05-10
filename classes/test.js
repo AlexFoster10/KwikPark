@@ -6,7 +6,6 @@
 // console.log(lot);
 // lot.populate(4,5);
 
-
 var bob = new Customer('testMail','Sam','pword');
 console.log(bob);
 
