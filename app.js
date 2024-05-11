@@ -15,7 +15,9 @@ const port = 3000;
 
 const { UserController } = require('./controllers/UserController.js');
 const { DBManager } = require('./controllers/DBManager.js');
-const { User } = require('./classes/User.js');
+const { User } = require('./classes/user.js');
+const { Message } = require('./classes/message.js');
+const { Customer } = require('./classes/customer.js');
 
 
 var userController = new UserController();
@@ -102,6 +104,9 @@ async function newUser(){
   userController.newCustomer("email@email.com","usernamer","password123","01273557132");
 }
 
+
+
+
 //===========================================================//
 // Main
 
@@ -129,7 +134,14 @@ newUser();
 //console.log(DBManager.customerMapSize());
 let test = DBManager.checkCustomerAccountExists("email@email.com");
 
+var sam = new Customer("sam@gmail","SAM","fartword","3432432");
+var bobb = new Customer("bobb@gmail","bobby123","fartword","3432432");
 
+var messages1 = new Message(sam,bobb);
+console.log(messages1);
+messages1.sendMessage("fart123123");
+console.log(messages1);
+messages1.writeToFile();
 
 
 

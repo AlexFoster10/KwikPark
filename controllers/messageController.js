@@ -9,10 +9,13 @@ class MessageController{
         return temp;
     }
 
-    sendMessage(temp,body){
+    sendMessage(user,message,body){
+        
         temp.sendMessage()
     }
 
+
+    
 
 
 
