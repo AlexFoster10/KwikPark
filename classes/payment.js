@@ -1,21 +1,31 @@
 const {parkingLot} = require('./parkingLot.js');
 const { User } = require('./user.js');
-
+const { Customer } = require('./customer.js');
 
 class Payment{
-    
-    static SetPrice(numOfHours,pricePerHour){
-        return(numOfHours * pricePerHour);
+    #customerToPay="";
+    #lot="";
+    constructor(customer,lot1){
+        
+        this.customerToPay = customer;
+        this.lot = lot1;
+        
     }
 
-    static makePayment(){
-        //take user and parkinglot related to payment and then calculate price and charge user from that
+    SetPrice(hours){
+        return(hours * this.lot.GetPricePerHour());
+    }
+
+    makePayment(hours){
+        this.customerToPay.SetBal(this.customerToPay.GetBal() - this.SetPrice(hours));
+        console.log(this.customerToPay.GetBal(), "asdasd");
+        
 
     }
 
 
 
 }
-let user1 = new User("email1", "name1", "password1", "phonenumber")
+
  
-module.exports = {Payment, user1};
+module.exports = {Payment};

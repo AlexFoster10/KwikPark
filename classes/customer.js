@@ -36,6 +36,14 @@ toString(){
     console.log(this.getPassword());
 }
 
+SetBal(amount){
+    this.#bal = amount;
+}
+
+GetBal(){
+    return this.#bal;
+}
+
 }
 
 //exports

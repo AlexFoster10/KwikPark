@@ -1,9 +1,9 @@
 
 const { DBManager } = require('./DBManager.js');
 
-const { Customer } = require('./classes/Customer.js');
-
 const { Customer } = require('../classes/customer.js');
+
+
 
 const { Vehicle } = require('../classes/Vehicle.js');
 const bcrypt = require('bcrypt');

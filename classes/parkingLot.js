@@ -2,7 +2,7 @@ class ParkingLot{
     #name = "";
     #spaces = [];
     #admins = [];
-
+    #pricePerHour = 0;
 
     constructor(name){
         this.#name = name;
@@ -34,6 +34,15 @@ class ParkingLot{
             this.#spaces[y].GetStatus();
         }
     }
+
+    ChangePricePerHour(newPrice){
+        this.pricePerHour = newPrice;
+    }
+
+    GetPricePerHour(){
+        return this.pricePerHour;
+    }
 }
 
 
+module.exports = {ParkingLot};
