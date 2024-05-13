@@ -141,14 +141,14 @@ var Lot1 = new ParkingLot("")
 
 var messages1 = new Message(sam,bobb);
 console.log(messages1);
-//messages1.sendMessage("fart123123");
-//console.log(messages1);
-//messages1.writeToFile();
+messages1.sendMessage("fart123123");
+console.log(messages1);
+messages1.writeToFile();
 
-Lot1.ChangePricePerHour(5);
-sam.SetBal(100);
-var newPayment = new Payment(sam,Lot1);
-newPayment.makePayment(2);
+//Lot1.ChangePricePerHour(5);
+//sam.SetBal(100);
+//var newPayment = new Payment(sam,Lot1);
+//newPayment.makePayment(2);
 
 
 

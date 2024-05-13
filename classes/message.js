@@ -5,12 +5,13 @@ class Message{
     messageList = [];
     sender="";
     recipient="";
-    messageTitle=""
+    messageTitle="";
 
     constructor(user,user2){
         this.sender = user.getUsername();
         this.recipient = user2.getUsername();
         this.messageTitle = (this.sender + "_" + this.recipient)
+        
     }
 
     getMessages(){
@@ -22,7 +23,7 @@ class Message{
     }
 
     writeToFile(){
-        fs.writeFile(this.messageTitle, JSON.stringify(Message), callbackify)
+       fs.writeFileSync(this.messageTitle,JSON.stringify(this.messageList), callbackify)
     }
 
 
