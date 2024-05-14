@@ -140,11 +140,14 @@ var bobb = new Customer("bobb@gmail","bobby123","fartword","3432432");
 var Lot1 = new ParkingLot("")
 
 var messages1 = new Message(sam,bobb);
-console.log(messages1);
-messages1.sendMessage("fart123123");
-console.log(messages1);
-messages1.writeToFile();
+//console.log(messages1);
+messages1.sendMessage("This is a message");
 
+//console.log(messages1);
+messages1.writeToFile();
+messages1.sendMessage("This is another message");
+messages1.writeToFile();
+messages1.readFromFile();
 //Lot1.ChangePricePerHour(5);
 //sam.SetBal(100);
 //var newPayment = new Payment(sam,Lot1);
