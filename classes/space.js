@@ -2,6 +2,7 @@ class Space{
     #booked = false;
     #area = 0; 
     #id = 0; 
+    #bookedTimes = []; 
 
 
     constructor(area,id){
@@ -12,12 +13,15 @@ class Space{
     }
 
     GetStatus(){
-        return this.#booked;
+        console.log("Space ID: "+ this.#id + " Booking Status: "+ this.#booked)
     }
 
     setBooked(bool){
         this.#booked = bool;
     }
-} 
 
-module.exports = {Space};
+    attemptBooking(date){
+        
+    }
+
+} 
