@@ -1,7 +1,7 @@
-function signupForm() {
+async function signupForm() {
   var email = document.getElementById('email').value;
   var phone = document.getElementById('phoneNum').value;
-  var user = document.getElementById('newUsr').value;
+  var userName = document.getElementById('newUsr').value;
   var password = document.getElementById('password').value;
   var password2 = document.getElementById('confirmPass').value;
 
@@ -9,16 +9,47 @@ function signupForm() {
   if (!validEmail(email)) {
     alert("Please enter a valid email address.");
     return false;
-}
+  }
 
-if (!validPhone(phone)) {
+  if (!validPhone(phone)) {
     alert("Please enter a valid phone number.");
     return false;
-}
+  }
 
-  // Redirect to the new page
-  window.location.href = '/userHome';
+  if (password !== password2) {
+    alert("Passwords do not match.");
+    return false;
+  }
+
+  // If form is valid, send data to the server
+  try {
+    let response = await fetch('/app.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ 
+        email: email,
+        userName: userName,
+        password: password,
+        phoneNumber: phone 
+      })
+    });
+
+    if (response.ok) {
+      // Redirect to the new page
+      window.location.href = '/userHome';
+    } else {
+      alert("Signup failed. Please try again.");
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert("An error occurred. Please try again.");
+  }
+
   return false; // Prevent default form submission
+
+
 }
 
 function validEmail(email) {
