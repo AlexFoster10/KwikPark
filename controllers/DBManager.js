@@ -15,6 +15,12 @@ class DBManager{
     constructor(){ 
     }
 
+    static getCustomerArray(){
+        for(var x=0;x<this.customerArray.length;x++){
+            console.log(customerArray.at(x));
+        }
+    }
+
 
     static checkUser(email){
         if(email in this.userMap){
@@ -64,6 +70,7 @@ class DBManager{
             }
         }
         console.log("error no such entry");
+        return null;
     }
 
     // static customerMapSize(){

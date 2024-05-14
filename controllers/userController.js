@@ -30,11 +30,9 @@ class UserController{
     }
 
     async newCustomer(email,userName,password,phoneNumber){
-        var temp;
-        var encryptedPassword = await this.encrypt(password).
-        then(temp = await new Customer(email, userName, encryptedPassword, phoneNumber)).
-        then(DBManager.createAccountCustomer(temp));
-        
+        console.log(password);
+        const temp = new Customer(email, userName, password, phoneNumber);
+        DBManager.createAccountCustomer(temp);   
     }
 
     newAdmin(email,userName,password,phoneNumber){
@@ -50,6 +48,7 @@ class UserController{
     async compare(guess, password){
         var isSame = await bcrypt.compare(guess, password) 
         console.log(isSame) 
+        return isSame;
     }
 
     async hashPassword(password, password2) { // updated
@@ -57,7 +56,19 @@ class UserController{
         const hash = await bcrypt.hash(password, salt)
         const isSame = await bcrypt.compare(password2, hash) // updated
         console.log(isSame); // updated
-        
+    }
+
+    checkPassword(email,password){
+        const temp = DBManager.searchCustomerArray(email);
+        if(temp != null){
+            if(this.compare(password,temp.getPassword())){
+                console.log("same")
+                return true;
+            }else{
+                console.log("not same")
+                return false;
+            }
+        }
     }
 
 

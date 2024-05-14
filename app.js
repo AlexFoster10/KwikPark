@@ -95,24 +95,45 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}!`);
 });
 
+//responces
+
+
+//new customer
+app.post("/001", function(req, res){
+    userController.newCustomer(req.body.email, req.body.userName, req.body.password, req.body.phoneNumber)
+})
+
+// user login
+app.post("/002", function(req, res){
+
+})
+
 //functions
 //-----------------------------------------------------------//
 
 async function newUser(){
   var password = 'password123';
-  var encryptedPassword = userController.encrypt(password);
-  var guess = 'password123';
-  userController.newCustomer("email@email.com","usernamer","password123","01273557132");
-}
+  const encryptedPassword = await userController.encrypt(password);
+  console.log(encryptedPassword);
+  userController.newCustomer("email@email.com","usernamer",encryptedPassword,"01273557132");
 
+}
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
 
 
 //===========================================================//
 // Main
 
+async function main(){
 newUser();
+await sleep (1000);
+DBManager.searchCustomerArray("email@email.com");
+await sleep(1000);
+userController.checkPassword("email@email.com",'password123')
+}
 
+main();
 
 
 //var temp = userController.compare(guess, encryptedPassword)
@@ -133,7 +154,7 @@ newUser();
 
 
 //console.log(DBManager.customerMapSize());
-let test = DBManager.checkCustomerAccountExists("email@email.com");
+//let test = DBManager.checkCustomerAccountExists("email@email.com");
 
 var sam = new Customer("sam@gmail","SAM","fartword","3432432");
 var bobb = new Customer("bobb@gmail","bobby123","fartword","3432432");
