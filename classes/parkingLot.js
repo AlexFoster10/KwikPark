@@ -1,8 +1,11 @@
 class ParkingLot{
     #name = "";
     #spaces = [];
+    #numOfSpaces = this.#spaces.length;
     #admins = [];
     #pricePerHour = 0;
+    #earnings = 0;
+
 
     constructor(name){
         this.#name = name;
@@ -29,18 +32,30 @@ class ParkingLot{
     
     }
 
-    GetStatus(){
-        for(let y=0;y<this.#spaces.length;y++){
-            this.#spaces[y].GetStatus();
+    GetArrayStatus(){
+        var bookedCount = 0;
+        var unBookedCount = 0;
+        for(let x = 0;x < this.#numOfSpaces;x++){
+            if(this.#spaces[x].GetStatus){
+                bookedCount++;
+            }
+            
         }
+        unBookedCount = this.#numOfSpaces - bookedCount;
+        // for(let y=0;y<;y++){
+        //     this.#spaces[y].GetStatus();
+        // }
     }
 
     ChangePricePerHour(newPrice){
-        this.pricePerHour = newPrice;
+        this.#pricePerHour = newPrice;
     }
 
     GetPricePerHour(){
-        return this.pricePerHour;
+        return this.#pricePerHour;
+    }
+    AddEarnings(price){
+        this.#earnings + price;
     }
 }
 
