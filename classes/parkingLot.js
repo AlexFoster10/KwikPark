@@ -1,7 +1,9 @@
+const {Space} = require("./space.js");
+
 class ParkingLot{
     #name = "";
     #spaces = [];
-    #numOfSpaces = this.#spaces.length;
+    
     #admins = [];
     #pricePerHour = 0;
     #earnings = 0;
@@ -35,13 +37,15 @@ class ParkingLot{
     GetArrayStatus(){
         var bookedCount = 0;
         var unBookedCount = 0;
-        for(let x = 0;x < this.#numOfSpaces;x++){
-            if(this.#spaces[x].GetStatus){
+        
+        for(let x = 0;x < this.#spaces.length;x++){
+            if(this.#spaces[x].GetStatus()){
                 bookedCount++;
             }
             
         }
-        unBookedCount = this.#numOfSpaces - bookedCount;
+        unBookedCount = this.#spaces.length - bookedCount;
+        console.log("Booked = ",bookedCount, " UnBooked = ", unBookedCount);
         // for(let y=0;y<;y++){
         //     this.#spaces[y].GetStatus();
         // }
@@ -56,6 +60,18 @@ class ParkingLot{
     }
     AddEarnings(price){
         this.#earnings + price;
+    }
+
+    GetSpaceFromId(ID){
+        for(let x = 0;x < this.#spaces.length;x++){
+            if (this.#spaces[x].GetId() == ID){
+                
+                return this.#spaces[x];
+            }
+        }
+    }
+    GetName(){
+        return this.#name;
     }
 }
 

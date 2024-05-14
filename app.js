@@ -19,6 +19,9 @@ const { Message } = require('./classes/message.js');
 const { Customer } = require('./classes/customer.js');
 const { Payment } = require('./classes/payment.js');
 const { ParkingLot } = require('./classes/parkingLot.js');
+const { SiteController } = require('./controllers/SiteController.js');
+const { Booking } = require("./classes/booking.js");
+const { Space } = require('./classes/space.js');
 
 var userController = new UserController();
 
@@ -172,18 +175,27 @@ var sam = new Customer("sam@gmail","SAM","fartword","3432432");
 var bobb = new Customer("bobb@gmail","bobby123","fartword","3432432");
 var mary = new Customer("mary@gmail","Mazza","fartword","3432432");
 var oliver = new Customer("oliver@gmail","olly","fartword","343243223");
-var Lot1 = new ParkingLot("")
+var Lot1 = new ParkingLot("Yellow lot");
 
-var messages1 = new Message(sam,bobb);
-//console.log(messages1);
-messages1.sendMessage("This is a message",sam.getUsername());
+// var messages1 = new Message(sam,bobb);
+// //console.log(messages1);
+// messages1.sendMessage("This is a message",sam.getUsername());
 
-//console.log(messages1);
-messages1.writeToFile();
-messages1.sendMessage("This is another[ adf, ] message", bobb.getUsername());
-messages1.writeToFile();
-messages1.readFromFile();
+// //console.log(messages1);
+// messages1.writeToFile();
+// messages1.sendMessage("This is another[ adf, ] message", bobb.getUsername());
+// messages1.writeToFile();
+// messages1.readFromFile();
 
+
+
+var site1 = new SiteController;
+site1.addLot(Lot1);
+var currentLot = site1.GetParkingLot("Yellow lot")
+currentLot.populate(1,10);
+currentLot.GetArrayStatus();
+var booking1 = new Booking(oliver,currentLot.GetSpaceFromId(5),1200,1300);
+currentLot.GetArrayStatus();
 
 
 

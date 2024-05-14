@@ -1,6 +1,6 @@
 const {Space} = require('./space.js');
 
-class booking{
+class Booking{
     user;
     space;
     endTime = "";
@@ -10,7 +10,7 @@ class booking{
     constructor(user,space,endTime,startTime){
         this.user = user;
         this.space = space;
-        space.setBooked(true);
+        this.space.setBooked(true);
         this.endTime = endTime;
         this.startTime = startTime;
     }
@@ -24,3 +24,4 @@ class booking{
     
 
 }
+module.exports = {Booking};

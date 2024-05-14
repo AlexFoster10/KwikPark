@@ -18,6 +18,10 @@ class Space{
     setBooked(bool){
         this.#booked = bool;
     }
+
+    GetId(){
+        return this.#id;
+    }
 } 
 
 module.exports = {Space};

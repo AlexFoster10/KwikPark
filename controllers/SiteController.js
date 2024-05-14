@@ -20,6 +20,14 @@ class SiteController{
         }
     }
 
+    GetParkingLot(name){
+        for(let x = 0; x < this.#parkingLots.length;x++){
+            if(this.#parkingLots[x].GetName() == name){
+                return this.#parkingLots[x];
+            }
+        }
+    }
+
 
 }
 
