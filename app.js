@@ -69,6 +69,12 @@ app.post("/001", function(req, res){
 
 // user login
 app.post("/002", function(req, res){
+    if(userController.checkPassword(req.body.email, req.body.password)){
+      res.sendStatus(200);
+    }else{
+      //recived but data failed
+      res.sendStatus(209)
+    }
 
 })
 
