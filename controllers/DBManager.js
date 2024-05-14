@@ -57,7 +57,7 @@ class DBManager{
             return this.searchCustomerArray(email);
         }
         else{
-            console.log("Database goes here");
+            //console.log("Database goes here");
         }
     }
 

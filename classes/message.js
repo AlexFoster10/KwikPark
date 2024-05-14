@@ -28,12 +28,12 @@ class Message{
 
     writeToFile(){
  
-        fs.writeFileSync(this.messageTitle,JSON.stringify(this), callbackify)
+        fs.writeFileSync("Messages/"+this.messageTitle,JSON.stringify(this), callbackify)
     }
 
     readFromFile(){
        
-        const data = fs.readFileSync(this.messageTitle,{ encoding: 'utf8', flag: 'r' });
+        const data = fs.readFileSync("Messages/"+this.messageTitle,{ encoding: 'utf8', flag: 'r' });
  
 
         console.log(data);

@@ -120,6 +120,14 @@ async function newUser(){
 }
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
+//signup endpoint
+app.post('/signup', (req, res) => {
+  const { email, userName, password, phoneNumber } = req.body;
+  console.log('Received signup data:', { email, userName, password, phoneNumber });
+
+  res.status(200).json({ message: 'Signup successful' });
+});
+
 
 
 //===========================================================//
