@@ -106,6 +106,14 @@ async function newUser(){
 }
 
 
+//signup endpoint
+app.post('/signup', (req, res) => {
+  const { email, userName, password, phoneNumber } = req.body;
+  console.log('Received signup data:', { email, userName, password, phoneNumber });
+
+  res.status(200).json({ message: 'Signup successful' });
+});
+
 
 
 //===========================================================//

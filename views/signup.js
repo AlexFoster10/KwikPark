@@ -22,18 +22,21 @@ async function signupForm() {
   }
 
   // If form is valid, send data to the server
+
+  const data = { 
+    email: email, 
+    userName: userName,  
+    password: password, 
+    phoneNumber: phone 
+  };
+
   try {
-    let response = await fetch('/app.js', {
+    let response = await fetch('/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ 
-        email: email,
-        userName: userName,
-        password: password,
-        phoneNumber: phone 
-      })
+      body: JSON.stringify(data)
     });
 
     if (response.ok) {
