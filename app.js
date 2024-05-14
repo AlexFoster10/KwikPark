@@ -62,6 +62,8 @@ app.post("/001", function(req, res){
   console.log('Received POST request on /001');
   console.log(req.body);
 
+  userController.newCustomer(req.body.email, req.body.userName, req.body.password, req.body.phoneNumber);
+
   res.sendStatus(200);
 });
 
@@ -125,9 +127,9 @@ console.log(`Server is running on port ${port}!`);
 
 async function newUser(){
   var password = 'password123';
-  const encryptedPassword = await userController.encrypt(password);
-  console.log(encryptedPassword);
-  userController.newCustomer("email@email.com","usernamer",encryptedPassword,"01273557132");
+  // const encryptedPassword = await userController.encrypt(password);
+  // console.log(encryptedPassword);
+  userController.newCustomer("email@email.com","usernamer",password,"01273557132");
 
 }
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
@@ -145,28 +147,7 @@ await sleep(1000);
 userController.checkPassword("email@email.com",'password123')
 }
 
-//main();
-
-
-//var temp = userController.compare(guess, encryptedPassword)
-
-// async function hashPassword(password, password2) { // updated
-//   const salt = await bcrypt.genSalt(10)
-//   const hash = await bcrypt.hash(password, salt)
-//   const isSame = await bcrypt.compare(password2, hash) // updated
-//   console.log(isSame) // updated
-// }
-
-//hashPassword('1234','1234');
-
-
-// console.log(DBManager.getTestNum());
-// userController.connectionTest();
-// console.log(DBManager.getTestNum());
-
-
-//console.log(DBManager.customerMapSize());
-//let test = DBManager.checkCustomerAccountExists("email@email.com");
+main();
 
 var sam = new Customer("sam@gmail","SAM","fartword","3432432");
 var bobb = new Customer("bobb@gmail","bobby123","fartword","3432432");
