@@ -14,7 +14,7 @@ class Message{
     constructor(user,user2){
         this.sender = user.getUsername();
         this.recipient = user2.getUsername();
-        this.messageTitle = (this.sender + "_" + this.recipient)
+        this.messageTitle = (this.sender + "_" + this.recipient + ".json")
 
     }
 
