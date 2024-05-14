@@ -37,16 +37,16 @@ html
           input.input(type="text", id="newUsr", name="username", placeholder="Create a username")
 
           .box
-            img.imglogo(src="/img/image.jpg", alt="Username")
+            img.imglogo(src="/img/image.jpg", alt="password")
             label.label(for="password") Password:
           input.input(type="password", id="password", name="password", placeholder="Create a password")
 
           .box
-            img.imglogo(src="/img/image.jpg", alt="Username")
+            img.imglogo(src="/img/image.jpg", alt="confirmpass")
             label.label(for="confirm-password") Confirm password:
           input.input(type="password", id="confirmPass", name="confirm-password", placeholder="Confirm your password")
             
-          button.signupBtn(type="submit") Sign Up
+          button.signupBtn(type="submit" onsubmit="signupForm()") Sign Up
 
       a(href="/login", class="loginBtn") 
         button.loginBtn
