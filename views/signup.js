@@ -31,7 +31,7 @@ async function signupForm() {
   };
 
   try {
-    let response = await fetch('/signup', {
+    let response = await fetch('/001', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
