@@ -22,31 +22,27 @@ class Message{
         return this.messageList;
     }
 
-    sendMessage(text){
-        this.messageList.unshift(text);
+    sendMessage(text, sender){
+        this.messageList.unshift(text + " ~ "+sender);
     }
 
     writeToFile(){
+ 
         fs.writeFileSync(this.messageTitle,JSON.stringify(this), callbackify)
     }
 
     readFromFile(){
-        const file = readline.createInterface({ 
-            input: fs.createReadStream(this.messageTitle), 
-            output: process.stdout, 
-            terminal: false
-        }); 
-        file.on('line', (line) => { 
-            count++;
-            var lines = line.split("[");
-            lines = lines[1].split("]");
-            lines = lines[0].split(",");
-            for(let x = 0; x < lines.length;x++ ){
-                console.log(lines[x]);
-            }
-            
-           
-        });
+       
+        const data = fs.readFileSync(this.messageTitle,{ encoding: 'utf8', flag: 'r' });
+ 
+
+        console.log(data);
+        
+        var object = JSON.parse(data);
+        for(let x = 0; x < this.messageList.length;x++){
+            console.log(object.messageList[x]);
+        }
+        
     }
 
 }

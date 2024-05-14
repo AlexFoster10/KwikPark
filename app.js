@@ -137,17 +137,23 @@ let test = DBManager.checkCustomerAccountExists("email@email.com");
 
 var sam = new Customer("sam@gmail","SAM","fartword","3432432");
 var bobb = new Customer("bobb@gmail","bobby123","fartword","3432432");
+var mary = new Customer("mary@gmail","Mazza","fartword","3432432");
+var oliver = new Customer("oliver@gmail","olly","fartword","343243223");
 var Lot1 = new ParkingLot("")
 
 var messages1 = new Message(sam,bobb);
 //console.log(messages1);
-messages1.sendMessage("This is a message");
+messages1.sendMessage("This is a message",sam.getUsername());
 
 //console.log(messages1);
 messages1.writeToFile();
-messages1.sendMessage("This is another message");
+messages1.sendMessage("This is another[ adf, ] message", bobb.getUsername());
 messages1.writeToFile();
 messages1.readFromFile();
+
+
+
+
 //Lot1.ChangePricePerHour(5);
 //sam.SetBal(100);
 //var newPayment = new Payment(sam,Lot1);
