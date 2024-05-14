@@ -100,6 +100,7 @@ app.listen(port, () => {
 
 //new customer
 app.post("/001", function(req, res){
+    console.log('Received POST request on /001');
     userController.newCustomer(req.body.email, req.body.userName, req.body.password, req.body.phoneNumber)
 })
 
