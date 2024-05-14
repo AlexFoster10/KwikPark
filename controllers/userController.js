@@ -30,9 +30,11 @@ class UserController{
     }
 
     async newCustomer(email,userName,password,phoneNumber){
-        console.log(password);
-        const temp = new Customer(email, userName, password, phoneNumber);
+        console.log("start");
+        const encryptedPassword = await this.encrypt(password);
+        const temp = new Customer(email, userName, encryptedPassword, phoneNumber);
         DBManager.createAccountCustomer(temp);   
+        console.log("shindh");
     }
 
     newAdmin(email,userName,password,phoneNumber){
