@@ -145,7 +145,7 @@ await sleep(1000);
 userController.checkPassword("email@email.com",'password123')
 }
 
-main();
+//main();
 
 
 //var temp = userController.compare(guess, encryptedPassword)
