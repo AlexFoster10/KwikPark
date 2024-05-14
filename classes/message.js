@@ -11,7 +11,7 @@ class Message{
         this.sender = user.getUsername();
         this.recipient = user2.getUsername();
         this.messageTitle = (this.sender + "_" + this.recipient)
-        
+
     }
 
     getMessages(){
@@ -23,7 +23,7 @@ class Message{
     }
 
     writeToFile(){
-       fs.writeFileSync(this.messageTitle,JSON.stringify(this.messageList), callbackify)
+        fs.writeFileSync(this.messageTitle,JSON.stringify(this.messageList), callbackify)
     }
 
 
