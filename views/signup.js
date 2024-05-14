@@ -31,23 +31,23 @@ async function signupForm() {
   };
 
   try {
-    let response = await fetch('/001', {
-      method: 'POST',
+    let res = await fetch("/001", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
     });
 
-    if (response.ok) {
+    if (res.ok) {
       // Redirect to the new page
       window.location.href = '/userHome';
     } else {
-      alert("Signup failed. Please try again.");
+      alert("Signup failed. Please try again1.");
     }
   } catch (error) {
     console.error('Error:', error);
-    alert("An error occurred. Please try again.");
+    alert("An error occurred. Please try again2.");
   }
 
   return false; // Prevent default form submission

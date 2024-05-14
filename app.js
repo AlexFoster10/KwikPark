@@ -3,8 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-
+var bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const bcrypt = require('bcrypt');
@@ -22,6 +21,17 @@ const { Payment } = require('./classes/payment.js');
 const { ParkingLot } = require('./classes/parkingLot.js');
 
 var userController = new UserController();
+
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
 
 // view engine setup
 app.set('view engine', 'pug');
@@ -48,14 +58,20 @@ app.get('/login', (req, res) => {
 
 
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.post("/001", function(req, res){
+  console.log('Received POST request on /001');
+  console.log(req.body);
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+  res.sendStatus(200);
+});
+
+// user login
+app.post("/002", function(req, res){
+
+})
+
+
+
 
 // 404 error handler
 app.use(function(req, res, next) {
@@ -91,23 +107,18 @@ app.use(function(err, req, res, next) {
   });
 });
 // Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}!`);
-});
 
-//responces
+
+//middlewear
+
+
+app.listen(port, () => {
+console.log(`Server is running on port ${port}!`);
+});
 
 
 //new customer
-app.post("/001", function(req, res){
-    console.log('Received POST request on /001');
-    userController.newCustomer(req.body.email, req.body.userName, req.body.password, req.body.phoneNumber)
-})
 
-// user login
-app.post("/002", function(req, res){
-
-})
 
 //functions
 //-----------------------------------------------------------//
