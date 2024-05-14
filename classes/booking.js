@@ -15,7 +15,6 @@ class Booking{
         this.startTime = startTime;
     }
 
-    
 
     CheckIn(){
         this.isCheckedIn = true;
