@@ -5,10 +5,10 @@ const { Customer } = require('./customer.js');
 class Payment{
     #customerToPay="";
     #lot="";
-    constructor(customer,lot1){
+    constructor(customer,lot){
         
         this.customerToPay = customer;
-        this.lot = lot1;
+        this.lot = lot;
         
     }
 
@@ -17,7 +17,9 @@ class Payment{
     }
 
     makePayment(hours){
-        this.customerToPay.SetBal(this.customerToPay.GetBal() - this.SetPrice(hours));
+        const price = this.SetPrice(hours);
+        this.customerToPay.SetBal(this.customerToPay.GetBal() - price);
+        this.lot.
         console.log(this.customerToPay.GetBal(), "asdasd");
         
 

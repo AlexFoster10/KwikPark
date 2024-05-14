@@ -12,10 +12,12 @@ class Space{
     }
 
     GetStatus(){
-        console.log("Space ID: "+ this.#id + " Booking Status: "+ this.#booked)
+        return this.#booked;
     }
 
     setBooked(bool){
         this.#booked = bool;
     }
 } 
+
+module.exports = {Space};
