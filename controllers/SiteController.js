@@ -20,9 +20,9 @@ class SiteController{
         }
     }
 
-    GetParkingLot(name){
+    getParkingLot(name){
         for(let x = 0; x < this.#parkingLots.length;x++){
-            if(this.#parkingLots[x].GetName() == name){
+            if(this.#parkingLots[x].getName() == name){
                 return this.#parkingLots[x];
             }
         }
