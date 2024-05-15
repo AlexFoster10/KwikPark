@@ -10,7 +10,7 @@ class Booking{
     constructor(user,space,endTime,startTime){
         this.user = user;
         this.space = space;
-        this.space.setBooked(true);
+        this.space.setBooked();
         this.endTime = endTime;
         this.startTime = startTime;
     }

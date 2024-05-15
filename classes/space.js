@@ -2,7 +2,7 @@ class Space{
     #booked = false;
     #area = 0; 
     #id = 0; 
-    #bookedTimes = []; 
+    #bookedTimes = [];      //{"10-12-2004,1400-1500","10-13-2004,1600-1730"} //1012200414001500
 
 
     constructor(area,id){
@@ -13,11 +13,17 @@ class Space{
     }
 
     GetStatus(){
+
         console.log("Space ID: "+ this.#id + " Booking Status: "+ this.#booked)
+        return this.#booked;
     }
 
-    setBooked(bool){
-        this.#booked = bool;
+    setBooked(){
+        this.#booked = true;
+    }
+    
+    setNotbooked(){
+        this.#booked = false;
     }
 
     GetId(){
@@ -29,5 +35,5 @@ class Space{
 
 } 
 
-    
+module.exports = {Space};
  
