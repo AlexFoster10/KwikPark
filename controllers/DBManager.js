@@ -23,13 +23,6 @@ class DBManager{
         }
     }
 
-
-    static checkUser(email){
-        if(email in this.userMap){
-            return true;
-        }
-    }
-
     //testfunctions
     static testIncrement(){
         this.testNum ++;
@@ -53,13 +46,13 @@ class DBManager{
 
 
     static checkCustomerAccountExists(email){
-        console.log(this.customerArray);
         
-        if(this.customerArray.includes(email)){
-            return this.searchCustomerArray(email);
+        if(acc == null){
+            return false;
         }
         else{
-            //console.log("Database goes here");
+            //search the database
+            return acc;
         }
     }
 

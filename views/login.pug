@@ -21,18 +21,18 @@ html
           a(href='/booking') Booking
       h1.subHeading Login
       .main
-        form.form(action="/signup", method="POST")
+        form.form(onsubmit = "loginForm()")
           .box
             img.imglogo(src="/img/image.jpg", alt="Username")
-            label.label(for="new-username") New username:
-          input.input(type="text", id="new-username", name="username", placeholder="Create a username")
+            label.label(for="email") Email:
+          input.input(type="email", id="email", name="username", placeholder="Please Enter a username")
 
           .box
             img.imglogo(src="/img/image.jpg", alt="Username")
             label.label(for="password") Password:
-          input.input(type="password", id="password", name="password", placeholder="Create a password")
+          input.input(type="password", id="password", name="password", placeholder="Please Enter a password")
 
-          button.login(type="submit") login
+          button.login(type="button" onclick = "loginForm()") login
         // Button to navigate to another page
       .bottom
         a(href="/signup", class="NewUsr") 

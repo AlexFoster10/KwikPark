@@ -65,23 +65,47 @@ app.get('/booking', (req, res) => {
 
 
 
-app.post("/001", function(req, res){
+app.post("/001",async function(req, res){
   console.log('Received POST request on /001');
   console.log(req.body);
 
-  userController.newCustomer(req.body.email, req.body.userName, req.body.password, req.body.phoneNumber);
-
-  res.sendStatus(200);
+  const temp = await userController.newCustomer(req.body.email, req.body.userName, req.body.password, req.body.phoneNumber);
+  if(temp == true){
+    res.sendStatus(200);
+  }else{
+    // an account with this email alredy exists
+    res.sendStatus(211);
+  }
+ 
 });
 
 // user login
-app.post("/002", function(req, res){
-    if(userController.checkPassword(req.body.email, req.body.password)){
-      res.sendStatus(200);
-    }else{
-      //recived but data failed
-      res.sendStatus(209)
+app.post("/002",async function(req, res){
+    console.log("incomeing login reqest======================================\n\n");
+    console.log(req.body);
+
+    const temp = await userController.loginCheck(req.body.email, req.body.password);
+
+    switch(temp){
+      case "200":
+        res.sendStatus(200);
+        break;
+      case "210":
+        res.sendStatus(210);
+        break;
+      case "209":
+        res.sendStatus(209);
+        break;
+      default:
+        res.sendStatus(500);
+        // if its not one of the posible options we send a server error code    
     }
+      
+    
+    
+    
+
+    
 
 })
 
@@ -154,10 +178,8 @@ const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
 async function main(){
 newUser();
-await sleep (1000);
-DBManager.searchCustomerArray("email@email.com");
 await sleep(1000);
-userController.checkPassword("email@email.com",'password123')
+userController.loginCheck("email@email.com",'password123');
 }
 
 main();
