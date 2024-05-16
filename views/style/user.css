@@ -77,7 +77,7 @@
   font-size: 40px;
 }
 
-.home-slider {
+.home-slider, .home-slider1 {
   width: 90%;
   height: 508px;
   display: inline-block;
@@ -104,7 +104,7 @@
   flex-direction: column;
 }
 
-.lotTitle {
+.lotTitle, .usrTitle {
   width: 100%;
   height: 61px;
   padding-top: 8px;
@@ -133,7 +133,7 @@
   align-items: flex-start;
 }
 
-.PLot {
+.PLot, .imgBox {
   top: 0px;
   left: 0px;
   right: 0px;
@@ -216,18 +216,18 @@
   left: 250px;
 }
 
-.home-slider-button-next {
+.home-slider-button-next, .home-slider1 .swiper-button-next {
   fill: var(--dl-color-gray-black);
   color: var(--dl-color-gray-black);
   display: block;
   border-radius: var(--dl-radius-radius-radius4);
 }
 
-.home-slider-button-prev {
+.home-slider-button-prev, .home-slider1 .swiper-button-prev {
   display: block;
 }
 
-.home-slider-pagination {
+.home-slider-pagination, .home-slider1 .swiper-pagination {
   display: block;
 }
 
@@ -252,13 +252,6 @@
   align-items: center;
   padding-right: 4px;
   flex-direction: column;
-}
-
-.home-slider1 {
-  width: 95%;
-  height: 400px;
-  display: inline-block;
-  border-radius: 16px;
 }
 
 .Earnings {
