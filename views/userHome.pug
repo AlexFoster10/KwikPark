@@ -27,9 +27,9 @@ html(lang='en')
           a(href='/message') Message
       .main
         h1.pageTitle User Home Page
-      .home-slider.swiper-container(data-thq='slider', data-pagination='true', data-navigation='true', data-autoplay='false')
-        .swiper-wrapper
-          .home-slider-slide.swiper-slide
+      .home-slider.swiper(data-thq='slider', data-pagination='true', data-navigation='true', data-autoplay='false')
+        .swiper-wrapper(data-thq='slider-wrapper')
+          .home-slider-slide.swiper-slide(data-thq='slider-slide')
             .SlideCon
               h1.lotTitle Upcoming Booking
               .lotCon
@@ -49,14 +49,16 @@ html(lang='en')
                     button#openFormButton(type="button") Open Form
                 .rightCon
                   img.PLot(src='/img/image.jpg' alt='image')
-        .swiper-button-next.swiper-button-next
-        .swiper-button-prev.swiper-button-prev
-        .swiper-pagination.swiper-pagination-bullets
+        .home-slider-button-next.swiper-button-next(data-thq='slider-button-next')
+        .home-slider-button-prev.swiper-button-prev(data-thq='slider-button-prev')
+        .home-slider-pagination.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal(data-thq='slider-pagination')
+          .swiper-pagination-bullet(data-thq='slider-pagination-bullet')
+          .swiper-pagination-bullet(data-thq='slider-pagination-bullet')
       .bottom
         .Left
-          .home-slider1.swiper-container(data-thq='slider', data-pagination='true', data-navigation='true')
-            .swiper-wrapper
-              .home-slider-slide2.swiper-slide
+          .home-slider1.swiper(data-thq='slider', data-pagination='true', data-navigation='true')
+            .swiper-wrapper(data-thq='slider-wrapper')
+              .home-slider-slide2.swiper-slide(data-thq='slider-slide2')
                 .SlideCon
                   h1.usrTitle Vehicle
                   span.home-text31
@@ -70,7 +72,7 @@ html(lang='en')
                     br
                     span Disabled: no
                   img.imgBox(src='/img/image.jpg' alt='image')
-              .home-slider-slide3.swiper-slide
+              .home-slider-slide3.swiper-slide(data-thq='slider-slide3')
                 .SlideCon
                   h1.usrTitle Vehicle
                   span.home-text31
@@ -84,9 +86,10 @@ html(lang='en')
                     br
                     span Disabled: no
                   img.imgBox(src='/img/image.jpg' alt='image')
-            .swiper-button-next.swiper-button-next
-            .swiper-button-prev.swiper-button-prev
-            .swiper-pagination.swiper-pagination-bullets
+            .home-slider-pagination1.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal(data-thq='slider-pagination')
+              .swiper-pagination-bullet.swiper-pagination-bullet-active(data-thq='slider-pagination-bullet')
+            .swiper-button-prev(data-thq='slider-button-prev')
+            .swiper-button-next(data-thq='slider-button-next')
           .userCon
             .wallet
               h1.walletTitle Wallet
