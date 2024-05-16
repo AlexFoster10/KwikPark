@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title Login Page
+    style
+      include style/style.css
+      include style/booking.css
+
+  body
+    .page
+      .header
+        img.logo(src="/img/KwikPark_transparent.png" alt="est. 2024" )
+        h1.title KwikPark
+        .dropdown
+          button.burger-icon ☰
+        .dropdown-content.hidden
+          a(href='/admin') Admin
+          a(href='/userHome') User Home
+          a(href='/login') Login
+          a(href='/message') Message
+      h1.subHeading Login
+      .main
+        form.form(action="/signup", method="POST")
+          .box
+            img.imglogo(src="/img/image.jpg", alt="Username")
+            label.label(for="new-username") New username:
+          input.input(type="text", id="new-username", name="username", placeholder="Create a username")
+
+          .box
+            img.imglogo(src="/img/image.jpg", alt="Username")
+            label.label(for="password") Password:
+          input.input(type="password", id="password", name="password", placeholder="Create a password")
+
+          button.login(type="submit") login
+        // Button to navigate to another page
+      .bottom
+        a(href="/signup", class="NewUsr") 
+         button.NewUsr New User
+        a(href="/login", class="fPwd") 
+         button.fPwd Forgot Password
+    script
+      include booking.js
