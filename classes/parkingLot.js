@@ -101,6 +101,7 @@ class ParkingLot{
     }
 
     createBooking(user,space,day,month,year,time1,time2){
+        
         var data = new Booking(user,space,day,month,year,time1,time2);
         var hash = this.#bookings._hash(data.getBookingId());
         
