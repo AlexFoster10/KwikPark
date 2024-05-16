@@ -1,3 +1,5 @@
+
+
 async function signupForm() {
   var email = document.getElementById('email').value;
   var phone = document.getElementById('phoneNum').value;
@@ -16,10 +18,14 @@ async function signupForm() {
     return false;
   }
 
-  if (password !== password2) {
-    alert("Passwords do not match.");
+  if(!validPassword(password,password2)){
+    alert("passwords are not the same");
     return false;
   }
+  
+  
+
+  
 
   // If form is valid, send data to the server
 
@@ -39,11 +45,11 @@ async function signupForm() {
       body: JSON.stringify(data)
     });
 
-    if (res.ok) {
+    if(res.status == 200) {
       // Redirect to the new page
       window.location.href = '/userHome';
-    } else {
-      alert("Signup failed. Please try again1.");
+    }else if(res.status = 211){
+      alert("Sign up failed. This email is alredy linked to an account");
     }
   } catch (error) {
     console.error('Error:', error);
@@ -63,6 +69,18 @@ function validEmail(email) {
 function validPhone(phone) {
   var phoneRegex = /^\d+$/;
   return phoneRegex.test(phone);
+}
+
+function validPassword(password, passowrdconf){
+  if (password !== passowrdconf) {
+    alert("Passwords do not match.");
+    return false;
+  }
+}
+
+async function encrypt(password) {
+  const salt = await bcrypt.genSalt(10);
+  return await bcrypt.hash(password, salt);
 }
 
 //Toggle burger visibility

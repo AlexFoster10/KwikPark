@@ -25,16 +25,34 @@ class UserController{
     }
 
     //login checking
-    login(email,password){
-        
+    async loginCheck(email, password){
+        const temp = await DBManager.searchCustomerArray(email);
+        if(temp != false){
+            const ret = await this.compare(password, temp.getPassword());
+            if(ret == true){
+                return "200";
+            }else{
+                return "210"
+            }
+        }else{
+            return "209";
+        }
     }
 
     async newCustomer(email,userName,password,phoneNumber){
-        console.log("start");
-        const encryptedPassword = await this.encrypt(password);
-        const temp = new Customer(email, userName, encryptedPassword, phoneNumber);
-        DBManager.createAccountCustomer(temp);   
-        console.log("shindh");
+        const temp1 = await DBManager.searchCustomerArray(email);
+            if(temp1 == false){
+                console.log("account can be created")
+                const encryptedPassword = await this.encrypt(password);
+                const temp2 = new Customer(email, userName, encryptedPassword, phoneNumber);
+                DBManager.createAccountCustomer(temp2);
+                return true;   
+            }else{
+                console.log("account alredy exists")
+                return false;
+            }
+       
+
     }
 
     newAdmin(email,userName,password,phoneNumber){
@@ -49,7 +67,8 @@ class UserController{
 
     async compare(guess, password){
         var isSame = await bcrypt.compare(guess, password) 
-        console.log(isSame) 
+        console.log("comparison result:")
+        console.log(isSame);
         return isSame;
     }
 
@@ -60,18 +79,7 @@ class UserController{
         console.log(isSame); // updated
     }
 
-    checkPassword(email,password){
-        const temp = DBManager.searchCustomerArray(email);
-        if(temp != null){
-            if(this.compare(password,temp.getPassword())){
-                console.log("same")
-                return true;
-            }else{
-                console.log("not same")
-                return false;
-            }
-        }
-    }
+    
 
 
 }
