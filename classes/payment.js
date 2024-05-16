@@ -1,4 +1,4 @@
-const {parkingLot} = require('./parkingLot.js');
+const {ParkingLot} = require('./parkingLot.js');
 const { User } = require('./user.js');
 const { Customer } = require('./customer.js');
 
@@ -19,7 +19,7 @@ class Payment{
     makePayment(hours){
         const price = this.SetPrice(hours);
         this.customerToPay.SetBal(this.customerToPay.GetBal() - price);
-        this.lot.
+        this.lot.AddEarnings(price);
         console.log(this.customerToPay.GetBal(), "asdasd");
         
 

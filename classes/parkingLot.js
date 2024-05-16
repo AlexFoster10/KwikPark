@@ -1,7 +1,12 @@
+const {Space} = require("./space.js");
+const {Booking} = require("./booking.js");
+const {User} = require("./user.js");
+const {HashTable} = require("./hashTable.js");
+
 class ParkingLot{
     #name = "";
     #spaces = [];
-    #numOfSpaces = this.#spaces.length;
+    #bookings = new HashTable(0);
     #admins = [];
     #pricePerHour = 0;
     #earnings = 0;
@@ -11,12 +16,13 @@ class ParkingLot{
         this.#name = name;
     }
 
-    SetSpaces(array){
+    setSpaces(array){
         this.#spaces = array;
     }
     
     //x is zone number a is space number
     populate(x,a){
+        this.#bookings.addSize(a);
         //can only populate if no spaces
         if (this.#spaces.length==0){
             for(let y=0;y<x;y++){
@@ -28,34 +34,84 @@ class ParkingLot{
         else{
             console.log("Spaces Already Present");
         }
+        this.#bookings= new HashTable(this.#spaces.length)
 
     
     }
 
-    GetArrayStatus(){
+    getArrayStatus(){
         var bookedCount = 0;
         var unBookedCount = 0;
-        for(let x = 0;x < this.#numOfSpaces;x++){
-            if(this.#spaces[x].GetStatus){
+        
+        for(let x = 0;x < this.#spaces.length;x++){
+            if(this.#spaces[x].GetStatus()){
                 bookedCount++;
             }
             
         }
-        unBookedCount = this.#numOfSpaces - bookedCount;
+        unBookedCount = this.#spaces.length - bookedCount;
+        console.log("Booked = ",bookedCount, " UnBooked = ", unBookedCount);
         // for(let y=0;y<;y++){
         //     this.#spaces[y].GetStatus();
         // }
     }
 
-    ChangePricePerHour(newPrice){
+    changePricePerHour(newPrice){
         this.#pricePerHour = newPrice;
     }
 
-    GetPricePerHour(){
+    getPricePerHour(){
         return this.#pricePerHour;
     }
-    AddEarnings(price){
+    addEarnings(price){
         this.#earnings + price;
+    }
+
+    getSpaceFromId(ID){
+        for(let x = 0;x < this.#spaces.length;x++){
+            if (this.#spaces[x].GetId() == ID){
+                
+                return this.#spaces[x];
+            }
+        }
+    }
+
+    getName(){
+        return this.#name;
+    }
+
+
+    removeBookingFromList(booking){
+        var hash = this.#bookings._hash(booking.getBookingId());
+        this.#bookings.remove(hash);
+    }
+
+    getBookings(){
+        console.log(this.#bookings);
+        // for(let x = 0; x < this.#bookings.length;x++){
+        //     if(this.#bookings[x].User.getUsername() == User.getUsername()){
+        //         return this.#bookings[x];
+        //     }
+        // }
+    }
+
+    getBooking(key){
+        var data = this.#bookings.get(this.#bookings.__hash(key));
+        console.log(data);
+    }
+
+    createBooking(user,space,day,month,year,time1,time2){
+        var bool = space.attemptBooking(day,month,year,time1,time2);
+        if(bool){
+            space.setBooked();
+            var data = new Booking(user,space,day,month,year,time1,time2);
+            var hash = this.#bookings._hash(data.getBookingId());
+            this.#bookings.set(hash, data);
+            return true;
+        }
+        if(!bool){
+            return false;
+        }
     }
 }
 

@@ -1,24 +1,47 @@
 const {Space} = require('./space.js');
 
-class booking{
-    user;
-    space;
-    endTime = "";
-    startTime = "";
-    isCheckedIn = false;
+class Booking{
+    #bookingID = "";
+    #user;
+    #space;
+    #date;
+    #endTime = "";
+    #startTime = "";
+    #isCheckedIn = false;
 
-    constructor(user,space,endTime,startTime){
-        this.user = user;
-        this.space = space;
-        this.endTime = endTime;
-        this.startTime = startTime;
+    static createRandomString(length) {
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"; //char list
+        let result = "";
+        for (let i = 0; i < length; i++) {
+          result += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return result;
     }
 
+
+
+    constructor(user,space,day,month,year,endTime,startTime){
+        this.#bookingID = Booking.createRandomString(10);
+        this.#user = user;
+        this.#space = space;
+        
+        this.#date = day + "-" + month + "-" + year;
+        
+        this.#endTime = endTime;
+        this.#startTime = startTime;
+    }
+
+    
 
     CheckIn(){
         this.isCheckedIn = true;
     }
 
+    getBookingId(){
+        return this.#bookingID;
+    }
+
     
 
 }
+module.exports = {Booking};
