@@ -22,6 +22,7 @@ const { ParkingLot } = require('./classes/parkingLot.js');
 const { SiteController } = require('./controllers/SiteController.js');
 const { Booking } = require("./classes/booking.js");
 const { Space } = require('./classes/space.js');
+const {day,month,year} = require("./views/booking.js");
 
 var userController = new UserController();
 
@@ -57,6 +58,9 @@ app.get('/signup', (req, res) => {
 });
 app.get('/login', (req, res) => {
   res.render('login');
+});
+app.get('/booking', (req, res) => {
+  res.render('booking');
 });
 
 
@@ -178,10 +182,13 @@ var Lot1 = new ParkingLot("Yellow lot");
 
 var site1 = new SiteController;
 site1.addLot(Lot1);
-var currentLot = site1.getParkingLot("Yellow lot")
+var currentLot = site1.getParkingLot("Yellow lot");
 currentLot.populate(1,10);
 currentLot.getArrayStatus();
-currentLot.createBooking(mary,currentLot.getSpaceFromId(5),10,12,2005,1400,1600);
+function makeBooking(){
+  currentLot.createBooking(mary,currentLot.getSpaceFromId(5),day,month,year,1400,1600);
+}
+
 currentLot.createBooking(oliver,currentLot.getSpaceFromId(5),10,12,2005,1550,1750);
 currentLot.getArrayStatus();
 currentLot.getBookings();

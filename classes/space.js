@@ -38,7 +38,7 @@ class Space{
         array.push(year);
         array.push(time1);
         array.push(time2);
-        
+        console.log(array);
         
         
        

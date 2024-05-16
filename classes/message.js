@@ -34,7 +34,7 @@ class Message{
     readFromFile(){
        
         const data = fs.readFileSync("Messages/"+this.messageTitle,{ encoding: 'utf8', flag: 'r' });
- 
+
 
         console.log(data);
         

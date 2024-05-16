@@ -1,8 +1,8 @@
 doctype html
 html
   head
-    title Login Page
-    style
+    title Booking page
+        style
       include style/style.css
       include style/booking.css
 
@@ -19,25 +19,20 @@ html
           a(href='/login') Login
           a(href='/message') Message
           a(href='/booking') Booking
-      h1.subHeading Login
+      h1.subHeading Make a booking
       .main
-        form.form(action="/signup", method="POST")
+        form.form(onsubmit="getValues()" onsubmit="makeBooking()")
           .box
-            img.imglogo(src="/img/image.jpg", alt="Username")
-            label.label(for="new-username") New username:
-          input.input(type="text", id="new-username", name="username", placeholder="Create a username")
+            
+          label.label(for="new-username") Enter desired date:
+          input.input(type="text", id="day", name="day",maxlength="2",minlength="2", placeholder="DD")
 
-          .box
-            img.imglogo(src="/img/image.jpg", alt="Username")
-            label.label(for="password") Password:
-          input.input(type="password", id="password", name="password", placeholder="Create a password")
+          input.input(type="text", id="month", name="month",maxlength="2",minlength="2", placeholder="MM")
+          input.input(type="text", id="year", name="year",maxlength="4",minlength="4", placeholder="YYYY")
 
-          button.login(type="submit") login
+          button.login(type="submit" onsubmit="") Make Booking
         // Button to navigate to another page
-      .bottom
-        a(href="/signup", class="NewUsr") 
-         button.NewUsr New User
-        a(href="/login", class="fPwd") 
-         button.fPwd Forgot Password
+
     script
       include booking.js
+      include app.js

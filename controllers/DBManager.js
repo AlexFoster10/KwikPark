@@ -3,6 +3,8 @@ const { User } = require('../classes/user.js');
 const { Customer } = require('../classes/customer.js');
 const { Admin } = require('../classes/admin.js');
 const { Password } = require('../classes/Password.js');
+const fs = require('fs') 
+const { callbackify } = require('util');
 
 
 //content 
@@ -69,13 +71,37 @@ class DBManager{
                 return this.customerArray.at(x);
             }
         }
-        console.log("error no such entry");
+        console.log("error no such entry in RAM");
+        const temp = readAccFromDB(customerToFind);
+        if(temp == false){
+            console.log(`${customerToFind} is not present in the long term data base`)
+            return false;
+        }else{
+            this.createAccountCustomer(temp);
+            return temp;
+        }
         return null;
     }
 
     // static customerMapSize(){
     //     return this.customerArray.size;
     // }
+
+    static saveAccToDB(user){
+        fs.writeFileSync("Accounts/"+user.getEmail(),JSON.stringify(user), callbackify);
+    }
+    
+    readAccFromDB(emailToFind){
+        try{
+            const data = fs.readFileSync("Accounts/"+emailToFind,{ encoding: 'utf8', flag: 'r' });
+            console.log(data);
+            var user = JSON.parse(data);
+            return user;
+        }
+        catch(e){
+            return false;
+        }
+    }
    
 }   
 

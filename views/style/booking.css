@@ -27,9 +27,9 @@
 }
 
 .form{
-    display:flex;
+    display:inline-block;
     align-items: center;
-    flex-direction: column;
+    
     background-color: #cfe4ff;
     border-radius:8px;
     box-shadow: 0px 0px 10px black;
@@ -39,8 +39,9 @@
 
 .box{
     display: flex;
-    align-self: flex-start;
+    text-shadow: 4px 4px 6px lightblue;
     margin-left: 5%;
+    
 }
 
 .imglogo{
@@ -55,10 +56,13 @@
 }
 
 .input{
-    width: 90%;
+    width: 20%;
     padding: 20px;
     margin-top: 5px;
     margin-bottom: 50px;
+    margin-right: 10px;
+    text-align: center;
+    box-shadow: 5px 5px lightblue;
 }
 
 .signupBtn, .login{
@@ -67,12 +71,16 @@
     font-size: 40px;
 }
 
-.loginBtn{
+.login{
     margin: 10px;
     width: 40%;
     height: 30%;
-    font-size: 40px;
+    font-size: 30px;
+    
     text-align: center;
+    border-radius: 10px;
+    background-color: #4788d7;
+    color: white;
 }
 
 .fPwd, .NewUsr{

@@ -1,3 +1,6 @@
+const fs = require('fs') 
+const { callbackify } = require('util');
+
 
 class User{
     #email = "";
@@ -29,6 +32,21 @@ class User{
         return this.#password;
     }
 
+    // saveAccToDB(){
+    //     fs.writeFileSync("Accounts/"+this.#email,JSON.stringify(this), callbackify);
+    // }
+
+    // readAccFromDB(){
+    //     try{
+    //         const data = fs.readFileSync("Accounts/"+this.#email,{ encoding: 'utf8', flag: 'r' });
+    //         console.log(data);
+    //         var object = JSON.parse(data);
+    //         return object;
+    //     }
+    //     catch(e){
+    //         return false;
+    //     }
+    // }
     
     
 }

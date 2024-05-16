@@ -30,11 +30,12 @@ class UserController{
     }
 
     async newCustomer(email,userName,password,phoneNumber){
-        console.log("start");
+        console.log("start of acount generation");
         const encryptedPassword = await this.encrypt(password);
         const temp = new Customer(email, userName, encryptedPassword, phoneNumber);
-        DBManager.createAccountCustomer(temp);   
-        console.log("shindh");
+        DBManager.createAccountCustomer(temp);
+        DBManager.saveAccToDB(temp); 
+        console.log("end of acount generation");
     }
 
     newAdmin(email,userName,password,phoneNumber){
