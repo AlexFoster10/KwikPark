@@ -56,7 +56,31 @@ html(lang='en')
           .swiper-pagination-bullet(data-thq='slider-pagination-bullet')
       .bottom
         .Left
-          .home-slider1.swiper(data-thq='slider', data-pagination='true', data-navigation='true')
+          .home-slider.swiper-container(data-thq='slider', data-pagination='true', data-navigation='true', data-autoplay='false')
+            .swiper-wrapper(data-thq='slider-wrapper')
+             .home-slider-slide.swiper-slide(data-thq='slider-slide')
+               .SlideCon
+                  h1.lotTitle Upcoming Booking
+                  .lotCon
+                    .lotConLeft
+                      span.lotInfo.textarea
+                        br
+                        span Parking Lot: Carpark Yellow
+                        br
+                        br
+                        span Space: 5A
+                        br
+                        br
+                        span Vehicle: fj22 di4ja
+                        br
+                        br
+                        span Estimated Price: £5
+                        button#openFormButton(type="button") Open Form
+                    .rightCon
+                      img.PLot(src='/img/image.jpg' alt='image')
+            .swiper-button-next.swiper-button-next
+            .swiper-button-prev.swiper-button-prev
+            .swiper-pagination.swiper-pagination-bullets
             .swiper-wrapper(data-thq='slider-wrapper')
               .home-slider-slide2.swiper-slide(data-thq='slider-slide2')
                 .SlideCon
