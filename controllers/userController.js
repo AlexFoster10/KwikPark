@@ -26,13 +26,15 @@ class UserController{
 
     //login checking
     async loginCheck(email, password){
+        console.log("\n\n#######################################################\n login check \n#######################################################")
         const temp = await DBManager.searchCustomerArray(email);
         if(temp != false){
+            console.log(password,"\n",temp.getPassword());
             const ret = await this.compare(password, temp.getPassword());
             if(ret == true){
                 return "200";
             }else{
-                return "210"
+                return "210";
             }
         }else{
             return "209";
@@ -40,15 +42,20 @@ class UserController{
     }
 
     async newCustomer(email,userName,password,phoneNumber){
+        console.log("\n\n#######################################################\n account creation \n#######################################################")
         const temp1 = await DBManager.searchCustomerArray(email);
             if(temp1 == false){
                 console.log("account can be created")
                 const encryptedPassword = await this.encrypt(password);
+                console.log("#############ENCRYPTED_PW#################");
                 const temp2 = new Customer(email, userName, encryptedPassword, phoneNumber);
+                console.log("##############################");
+
                 DBManager.createAccountCustomer(temp2);
+                DBManager.saveAccToDB(temp2);
                 return true;   
             }else{
-                console.log("account alredy exists")
+                console.log("account alredy exists");
                 return false;
             }
        
@@ -66,6 +73,7 @@ class UserController{
     }
 
     async compare(guess, password){
+        console.log("\n\n#######################################################\n comparison \n#######################################################");
         var isSame = await bcrypt.compare(guess, password) 
         console.log("comparison result:")
         console.log(isSame);

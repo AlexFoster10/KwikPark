@@ -8,17 +8,17 @@ async function signupForm() {
   var password2 = document.getElementById('confirmPass').value;
 
   // Perform form validation
-  if (!validEmail(email)) {
+  if (validEmail(email) == false) {
     alert("Please enter a valid email address.");
     return false;
   }
 
-  if (!validPhone(phone)) {
+  if (validPhone(phone) == false) {
     alert("Please enter a valid phone number.");
     return false;
   }
 
-  if(!validPassword(password,password2)){
+  if(validPassword(password,password2) == false){
     alert("passwords are not the same");
     return false;
   }
@@ -50,10 +50,12 @@ async function signupForm() {
       window.location.href = '/userHome';
     }else if(res.status = 211){
       alert("Sign up failed. This email is alredy linked to an account");
+      window.location.href = '/Signup'
     }
   } catch (error) {
     console.error('Error:', error);
     alert("An error occurred. Please try again2.");
+    window.location.href = '/Signup'
   }
 
   return false; // Prevent default form submission

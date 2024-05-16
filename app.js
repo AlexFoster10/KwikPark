@@ -177,9 +177,7 @@ const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 // Main
 
 async function main(){
-newUser();
-await sleep(1000);
-userController.loginCheck("email@email.com",'password123');
+//newUser();
 }
 
 main();

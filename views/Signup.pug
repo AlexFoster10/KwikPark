@@ -21,7 +21,7 @@ html
           a(href='/booking') Booking
       h1.subHeading Sign Up
       .main
-        form.form(id="myForm", action="", onsubmit="return signupForm()")
+        form.form(id="myForm", action="",)
           .box
             img.imglogo(src="/img/image.jpg", alt="Email")
             label.label(for="email") Email:
@@ -47,7 +47,7 @@ html
             label.label(for="confirm-password") Confirm password:
           input.input(type="password", id="confirmPass", name="confirm-password", placeholder="Confirm your password")
             
-          button.signupBtn(type="submit" onsubmit="signupForm()") Sign Up
+          button.signupBtn(type="button" onclick="return signupForm()") Sign Up
 
       a(href="/login", class="loginBtn") 
         button.loginBtn

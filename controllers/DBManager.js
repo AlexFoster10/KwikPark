@@ -35,7 +35,7 @@ class DBManager{
     //account creation
     static createAccountCustomer(temp){
         this.customerArray.push(temp);
-        console.log(temp.getEmail());
+        //console.log(temp.getEmail());
     }
     
     static createAccountAdmin(temp){
@@ -56,7 +56,7 @@ class DBManager{
         }
     }
 
-    static searchCustomerArray(customerToFind){
+    static async searchCustomerArray(customerToFind){
         for(var x=0;x<this.customerArray.length;x++){
             console.log(this.customerArray.at(x));
             if(this.customerArray.at(x).getEmail() == customerToFind){
@@ -65,15 +65,18 @@ class DBManager{
             }
         }
         console.log("error no such entry in RAM");
-        const temp = readAccFromDB(customerToFind);
+        const temp = await this.readAccFromDB(customerToFind);
+        console.log(temp.toString());
         if(temp == false){
             console.log(`${customerToFind} is not present in the long term data base`)
             return false;
         }else{
+            console.log("found in the persistant database")
             this.createAccountCustomer(temp);
+            console.log(temp.toString());
             return temp;
         }
-        return null;
+        
     }
 
     // static customerMapSize(){
@@ -81,20 +84,29 @@ class DBManager{
     // }
 
     static saveAccToDB(user){
-        fs.writeFileSync("Accounts/"+user.getEmail(),JSON.stringify(user), callbackify);
+        const data = {
+            email: user.getEmail(),
+            username: user.getUsername(),
+            password: user.getPassword(),
+            phoneNumber: user.getPhoneNumber()
+        }
+        
+        fs.writeFileSync("Accounts/"+user.getEmail()+".JSON",JSON.stringify(data), callbackify);
     }
     
-    readAccFromDB(emailToFind){
+    static readAccFromDB(emailToFind){
         try{
-            const data = fs.readFileSync("Accounts/"+emailToFind,{ encoding: 'utf8', flag: 'r' });
-            console.log(data);
-            var user = JSON.parse(data);
+            const data = fs.readFileSync("Accounts/"+emailToFind+".JSON",{ encoding: 'utf8', flag: 'r' });
+            const object =  JSON.parse(data);
+            
+            var user = new Customer(object.email, object.username, object.password, object.phoneNumber);
+            
             return user;
         }
         catch(e){
             return false;
         }
-    }
+    }   
    
 }   
 
