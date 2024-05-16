@@ -1,4 +1,4 @@
-/* Media Queries */
+/*Media Queries */
 @media (max-width: 768px) {
   .RightBox, .LeftBox, .home-ul {
     flex-direction: column;
@@ -51,7 +51,7 @@
   }
 }
 
-/* Reposition burger menu */
+/*Reposition burger menu*/
 .dropdown {
   position: relative;
   display: inline-block;
@@ -59,492 +59,483 @@
 
 .dropdown-content {
   background-color: #f9f9f9;
-  min-width: 160px; /* min-width for dropdown items */
+  min-width: 160px; /*min-width for dropdown items*/
 }
 
-.main {
-  flex: 0 0 auto;
-  width: 100%;
-  display: flex;
-  padding: var(--dl-space-space-oneandhalfunits);
-  align-items: flex-start;
-  margin-bottom: 8px;
-  flex-direction: column;
-}
+  .main {
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    padding: var(--dl-space-space-oneandhalfunits);
+    align-items: flex-start;
+    margin-bottom: 8px;
+    flex-direction: column;
+  }
+  .pageTitle {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+  }
+  .home-slider {
+    width: 90%;
+    height: 508px;
+    display: inline-block;
+    margin-left: var(--dl-space-space-threeunits);
+    border-color: #ffffff;
+    border-width: 1px;
+    margin-right: var(--dl-space-space-threeunits);
+    border-radius: 16px;
+  }
+  .home-slider-slide {
+    width: 100%;
+    height: 510px;
+    display: flex ;
+    background-color: #cfe4ff;
+  }
+  .SlideCon {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .lotTitle {
+    width: 100%;
+    height: 61px;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .lotCon {
+    width: 100%;
+    height: 453px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  .lotConLeft {
+    top: 0px;
+    flex: 0.5;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-self: flex-start;
+    align-items: flex-start;
+  }
+  .PLot {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 90%;
+    bottom: 0px;
+    height: 299px;
+    margin: auto;
+    position: absolute;
+    object-fit: cover;
+  }
+  .rightCon {
+    top: 0px;
+    flex: 0.5;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-self: flex-start;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .dateSelect {
+    top: 16px;
+    left: 0px;
+    right: 0px;
+    width: 80%;
+    height: 54px;
+    margin: auto;
+    position: absolute;
+    align-self: center;
+    background-color: #57aced;
+  }
+  .lotInfo {
+    left: 0px;
+    width: 75%;
+    bottom: 0px;
+    height: 70%;
+    position: absolute;
+    font-size: 20px;
+    margin-left: 32px;
+    border-width: 0px;
+    margin-bottom: 4px;
+    background-color: transparent;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  
+    /* Styling for the map container */
+    #map-container {
+        width: 500px;
+        height: 300px;
+        position: relative;
+        background-image: url('your-image.jpg'); /* Replace 'your-image.jpg' with the URL or path to your map image */
+        background-size: cover;
+    }
+    
+    /* Styling for the map markers */
+    .map-marker {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+    }
+    
+    /* Additional styling for specific markers */
+    .map-marker-1 {
+        top: 50px;
+        left: 100px;
+    }
+    
+    .map-marker-2 {
+        top: 150px;
+        left: 250px;
+    }
 
-.pageTitle {
-  color: rgb(255, 255, 255);
-  font-size: 40px;
-}
+  .home-slider-slide1 {
+    display: flex ;
+    background-color: #cfe4ff;
+  }
+  
+  
+  .home-slider-button-next {
+    fill: var(--dl-color-gray-black);
+    color: var(--dl-color-gray-black);
+    display: block;
+    border-radius: var(--dl-radius-radius-radius4);
+  }
+  .home-slider-button-prev {
+    display: block;
+  }
+  .home-slider-pagination {
+    display: block;
+  }
+  .bottom {
+    height: 910px;
+    display: flex;
+    position: relative;
+    align-self: stretch;
+    margin-top: 60px;
+    align-items: flex-start;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 60px;
+  }
+  .Left {
+    flex: 0 0 auto;
+    width: 50%;
+    height: 850px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-right: 4px;
+    flex-direction: column;
+  }
+  .home-slider1 {
+    width: 95%;
+    height: 400px;
+    display: inline-block;
+    border-radius: 16px;
+  }
+  .home-slider-slide2 {
+    width: 95%;
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #cfe4ff;
+  }
+  .Earnings {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    padding: 8px;
+    position: absolute;
+    align-self: center;
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  
+/*cleaned up wallet*/
+  .wallet {
+    background-color: #cfe4ff;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .walletTitle {
+    margin-bottom: 10px;
+    font-size: clamp(18px, 3vw, 64px);
+  }
+  
+  .walletBalance {
+    margin-bottom: 10px;
+    font-size: clamp(16px, 2.5vw, 50px);
+  }
+  
+  .wallet .amount {
+    font-weight: bold;
+  }
 
-.home-slider {
-  width: 90%;
-  height: 508px;
-  display: inline-block;
-  margin-left: var(--dl-space-space-threeunits);
-  border-color: #ffffff;
-  border-width: 1px;
-  margin-right: var(--dl-space-space-threeunits);
-  border-radius: 16px;
-}
+  button.prevTrans, button.addToWallet {
+    font-size: clamp(14px, 1.5vw, 18px);
+    padding: clamp(10px, 2vw, 20px); 
+    width: auto; 
+    max-width: 90%;
+    margin: 10px auto;
+    background-color: #3578ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
-.home-slider-slide {
-  width: 100%;
-  height: 510px;
-  display: flex ;
-  background-color: #cfe4ff;
-}
+  /* Adds spacing between buttons */
+  .walletButtons button {
+    margin: 10px 5px;
+  }
+
+  button.prevTrans:hover, button.addToWallet:hover {
+    background-color: #28597a;
+  }
 
 
-.SlideCon {
-  flex: 0 0 auto;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
 
-.lotTitle {
-  width: 100%;
-  height: 61px;
-  padding-top: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
+  
+  .home-slider-pagination1 {
+    display: block;
+  }
+  .userCon {
+    left: 0px;
+    width: 95%;
+    bottom: 0px;
+    height: 400px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin-right: 16px;
+    border-radius: 16px;
+    padding-right: 16px;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #cfe4ff;
+  }
+  .usrTitle {
+    padding: 8px;
+    font-size: 50px;
+    margin-top: 8px;
+  }
+  .search {
+    width: auto;
+    height: 50px;
+    padding: 8px;
+    margin-top: 4px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+  .home-text31 {
+    width: 85%;
+    font-size: 25px;
+  }
+  .imgBox {
+    left: 0px;
+    right: 0px;
+    width: 150px;
+    bottom: 0px;
+    height: 150px;
+    margin: auto;
+    position: absolute;
+    object-fit: cover;
+    padding-bottom: 8px;
+  }
+  .msgCon {
+    top: 0px;
+    flex: 0 0 auto;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-radius: 16px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .msgTitle {
+    top: 0px;
+    left: 0px;
+    color: rgb(255, 255, 255);
+    right: 0px;
+    height: auto;
+    margin: var(--dl-space-space-oneandhalfunits);
+    position: absolute;
+    font-size: 40px;
+    text-align: center;
+  }
+  .home-ul {
+    width: 100%;
+    height: 636px;
+    margin-top: 87px;
+    padding-left: var(--dl-space-space-oneandhalfunits);
+    padding-right: var(--dl-space-space-oneandhalfunits);
+    padding-bottom: 0px;
+  }
+  .msgli {
+    width:95%;
+    min-height: 120px; /*Adjusted height*/
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-color: #000000;
+    border-width: 1px;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #cfe4ff;
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px;
+    margin-bottom:28px;
+  
+  }
+  .msgimg {
+    width: 74px;
+    height: 66px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: cover;
+  }
+  
+  .Sender, .Subject {
+    position: absolute;
+    left: 110px; 
+    right: 20px; 
+    height: calc(50% - 60px); /* Adjusted height */
+    font-size: clamp(12px, 1vw + 1vh, 20px); /* Scalable font size with max limit */
+  }
+  
+  .Sender {
+    top: 20px;
+    height: calc(50% - 40px);
+    width: auto; 
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .Subject {
+    bottom: 20px; 
+    height: calc(50% - 40px); 
+    width: auto; 
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+  }
+  
 
-.lotCon {
-  width: 100%;
-  height: 453px;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-}
+  /*button overlap fix*/
+  .msgadmin, .home-button1, .moremsg, .prevtrans, .addwallet {
+    width: 90%;
+    height: auto; 
+    position: relative; 
+    margin: 20px auto;
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: #3578ab;
+    color: #ffffff; 
+    text-align: center; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    cursor: pointer; 
+    border: none; 
+  }
+  
+  
+  .RightBox, .LeftBox {
+    position: relative; 
+    padding-bottom: 80px; 
+  }
+  
+  .RightBox .msgadmin, .LeftBox .home-button1 {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+  }
 
-.lotConLeft {
-  top: 0px;
-  flex: 0.5;
-  left: 0px;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  position: absolute;
-  align-self: flex-start;
-  align-items: flex-start;
-}
-
-.PLot {
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  width: 90%;
-  bottom: 0px;
-  height: 299px;
-  margin: auto;
-  position: absolute;
-  object-fit: cover;
-}
-
-.rightCon {
-  top: 0px;
-  flex: 0.5;
-  right: 0px;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  position: absolute;
-  align-self: flex-start;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.dateSelect {
-  top: 16px;
-  left: 0px;
-  right: 0px;
-  width: 80%;
-  height: 54px;
-  margin: auto;
-  position: absolute;
-  align-self: center;
-  background-color: #57aced;
-}
-
-.lotInfo {
-  left: 0px;
-  width: 75%;
-  bottom: 0px;
-  height: 70%;
-  position: absolute;
-  font-size: 20px;
-  margin-left: 32px;
-  border-width: 0px;
-  margin-bottom: 4px;
-  background-color: transparent;
-  font-style: normal;
-  font-weight: 700;
-  text-transform: capitalize;
-}
-
-/* Styling for the map container */
-#map-container {
-  width: 500px;
-  height: 300px;
-  position: relative;
-  background-image: url('your-image.jpg'); /* Replace 'your-image.jpg' with the URL or path to your map image */
-  background-size: cover;
-}
-
-/* Styling for the map markers */
-.map-marker {
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-}
-
-/* Additional styling for specific markers */
-.map-marker-1 {
-  top: 50px;
-  left: 100px;
-}
-
-.map-marker-2 {
-  top: 150px;
-  left: 250px;
-}
-
-.home-slider1 {
-  width: 95%;
-  height: 400px;
-  display: inline-block;
-  border-radius: 16px;
-}
-
-.home-slider-slide2, .home-slider-slide3 {
-  width: 100%;
-  height: 510px;
-  display: flex ;
-  background-color: #cfe4ff;
-}
-
-.SlideCon {
-  flex: 0 0 auto;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.usrTitle {
-  width: 100%;
-  height: 61px;
-  padding-top: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.home-text31 {
-  width: 85%;
-  font-size: 25px;
-}
-
-.imgBox {
-  left: 0px;
-  right: 0px;
-  width: 150px;
-  bottom: 0px;
-  height: 150px;
-  margin: auto;
-  position: absolute;
-  object-fit: cover;
-  padding-bottom: 8px;
-}
-
-.home-slider-button-next {
-  fill: var(--dl-color-gray-black);
-  color: var(--dl-color-gray-black);
-  display: block;
-  border-radius: var(--dl-radius-radius-radius4);
-}
-
-.home-slider-button-prev {
-  display: block;
-}
-
-.home-slider-pagination, .home-slider-pagination1 {
-  display: block;
-}
-
-.bottom {
-  height: 910px;
-  display: flex;
-  position: relative;
-  align-self: stretch;
-  margin-top: 60px;
-  align-items: flex-start;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-bottom: 60px;
-}
-
-.Left {
-  flex: 0 0 auto;
-  width: 50%;
-  height: 850px;
-  display: flex;
-  position: relative;
-  align-items: center;
-  padding-right: 4px;
-  flex-direction: column;
-}
-
-.Earnings {
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  margin: auto;
-  padding: 8px;
-  position: absolute;
-  align-self: center;
-  text-align: center;
-  font-size: 50px;
-}
-
-/* cleaned up wallet */
-.wallet {
-  background-color: #cfe4ff;
-  border-radius: 8px;
-  padding: 10px;
-  text-align: center;
-}
-
-.walletTitle {
-  margin-bottom: 10px;
-  font-size: clamp(18px, 3vw, 64px);
-}
-
-.walletBalance {
-  margin-bottom: 10px;
-  font-size: clamp(16px, 2.5vw, 50px);
-}
-
-.wallet .amount {
-  font-weight: bold;
-}
-
-button.prevTrans, button.addToWallet {
-  font-size: clamp(14px, 1.5vw, 18px);
-  padding: clamp(10px, 2vw, 20px); 
-  width: auto; 
-  max-width: 90%;
-  margin: 10px auto;
-  background-color: #3578ab;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Adds spacing between buttons */
-.walletButtons button {
-  margin: 10px 5px;
-}
-
-button.prevTrans:hover, button.addToWallet:hover {
-  background-color: #28597a;
-}
-
-.userCon {
-  left: 0px;
-  width: 95%;
-  bottom: 0px;
-  height: 400px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  margin-right: 16px;
-  border-radius: 16px;
-  padding-right: 16px;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: #cfe4ff;
-}
-
-.msgCon {
-  top: 0px;
-  flex: 0 0 auto;
-  right: 0px;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  border-color: #ffffff;
-  border-width: 1px;
-  border-radius: 16px;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.msgTitle {
-  top: 0px;
-  left: 0px;
-  color: rgb(255, 255, 255);
-  right: 0px;
-  height: auto;
-  margin: var(--dl-space-space-oneandhalfunits);
-  position: absolute;
-  font-size: 40px;
-  text-align: center;
-}
-
-.home-ul {
-  width: 100%;
-  height: 636px;
-  margin-top: 87px;
-  padding-left: var(--dl-space-space-oneandhalfunits);
-  padding-right: var(--dl-space-space-oneandhalfunits);
-  padding-bottom: 0px;
-}
-
-.msgli {
-  width: 95%;
-  min-height: 120px; /* Adjusted height */
-  display: flex;
-  position: relative;
-  align-items: center;
-  border-color: #000000;
-  border-width: 1px;
-  border-radius: 8px;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: #cfe4ff;
-  box-shadow: rgb(0, 0, 0) 0px 0px 10px 0px;
-  margin-bottom: 28px;
-}
-
-.msgimg {
-  width: 74px;
-  height: 66px;
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  object-fit: cover;
-}
-
-.Sender, .Subject {
-  position: absolute;
-  left: 110px; 
-  right: 20px; 
-  height: calc(50% - 60px); /* Adjusted height */
-  font-size: clamp(12px, 1vw + 1vh, 20px); /* Scalable font size with max limit */
-}
-
-.Sender {
-  top: 20px;
-  height: calc(50% - 40px);
-  width: auto; 
-  border-radius: 16px;
-  background-color: rgb(255, 255, 255);
-}
-
-.Subject {
-  bottom: 20px; 
-  height: calc(50% - 40px); 
-  width: auto; 
-  border-radius: 16px;
-  background-color: rgb(255, 255, 255);
-}
-
-/* button overlap fix */
-.msgadmin, .home-button1, .moremsg, .prevtrans, .addwallet {
-  width: 90%;
-  height: auto; 
-  position: relative; 
-  margin: 20px auto;
-  padding: 10px 0;
-  border-radius: 8px;
-  background-color: #3578ab;
-  color: #ffffff; 
-  text-align: center; 
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-  cursor: pointer; 
-  border: none; 
-}
-
-.RightBox, .LeftBox {
-  position: relative; 
-  padding-bottom: 80px; 
-}
-
-.RightBox .msgadmin, .LeftBox .home-button1 {
-  position: absolute;
-  bottom: 20px; 
-  left: 50%;
-  transform: translateX(-50%); 
-}
-
-.popup-form-container {
-  display: none; /* Hide the form by default */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 999; /* Ensure the form appears above other content */
-}
-
-.popup-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-#closeFormButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#popupForm label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-#popupForm input[type="text"],
-#popupForm input[type="email"],
-#popupForm input[type="submit"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-#popupForm input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-#popupForm input[type="submit"]:hover {
-  background-color: #45a049;
-}
+  
+  .popup-form-container {
+    display: none; /* Hide the form by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Ensure the form appears above other content */
+  }
+  
+  .popup-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #closeFormButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #popupForm label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #popupForm input[type="text"],
+  #popupForm input[type="email"],
+  #popupForm input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  #popupForm input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #popupForm input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
