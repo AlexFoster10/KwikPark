@@ -1,0 +1,94 @@
+/*Reposition burger menu*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    background-color: #f9f9f9;
+    min-width: 160px; /*min-width for dropdown items*/
+}
+
+
+.subHeading {
+    top: 0px;
+    left: 0px;
+    color: rgb(255, 255, 255);
+    right: 0px;
+    height: auto;
+    margin: 20px;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  }
+.main{
+    width:50%;
+    height: 100%;
+}
+
+.form{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #cfe4ff;
+    border-radius:8px;
+    box-shadow: 0px 0px 10px black;
+    padding: 30px;
+    position: relative;
+}
+
+.box{
+    display: flex;
+    align-self: flex-start;
+    margin-left: 5%;
+}
+
+.imglogo{
+    width:50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.label{
+    align-self: flex-end;
+    margin:5px;
+}
+
+.input{
+    width: 90%;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.signupBtn, .login{
+    width: 60%;
+    height: 10%;
+    font-size: 40px;
+}
+
+.loginBtn{
+    margin: 10px;
+    width: 40%;
+    height: 30%;
+    font-size: 40px;
+    text-align: center;
+}
+
+.fPwd, .NewUsr{
+    margin: 10px;
+    width: 60%;
+    height: 90px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.bottom{
+    display: flex;
+    width: 60%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+}
+

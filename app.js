@@ -185,7 +185,7 @@ currentLot.createBooking(mary,currentLot.getSpaceFromId(5),10,12,2005,1400,1600)
 currentLot.createBooking(oliver,currentLot.getSpaceFromId(5),10,12,2005,1550,1750);
 currentLot.getArrayStatus();
 currentLot.getBookings();
-console.log("^^^^s");
+
 
  
 
