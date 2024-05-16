@@ -101,11 +101,17 @@ class ParkingLot{
     }
 
     createBooking(user,space,day,month,year,time1,time2){
-        var data = new Booking(user,space,day,month,year,time1,time2);
-        var hash = this.#bookings._hash(data.getBookingId());
-        
-        this.#bookings.set(hash, data);
-        
+        var bool = space.attemptBooking(day,month,year,time1,time2);
+        if(bool){
+            space.setBooked();
+            var data = new Booking(user,space,day,month,year,time1,time2);
+            var hash = this.#bookings._hash(data.getBookingId());
+            this.#bookings.set(hash, data);
+            return true;
+        }
+        if(!bool){
+            return false;
+        }
     }
 }
 

@@ -24,9 +24,7 @@ class Booking{
         this.#bookingID = Booking.createRandomString(10);
         this.#user = user;
         this.#space = space;
-        this.#space.setBooked();
         
-        this.#space.attemptBooking(day,month,year,endTime,startTime);
         this.#date = day + "-" + month + "-" + year;
         
         this.#endTime = endTime;

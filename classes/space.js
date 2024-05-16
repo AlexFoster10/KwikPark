@@ -38,29 +38,38 @@ class Space{
         array.push(year);
         array.push(time1);
         array.push(time2);
-        console.log(array);
-        console.log("herer");
-        //array[date,time1,time2]
-        console.log(this.#bookedTimes.length);
+        
+        
+        
+       
         for(let x = 0;x < this.#bookedTimes.length;x++){
             
             if(array[0] == this.#bookedTimes[x][0]){
-                
                 if(array[1] == this.#bookedTimes[x][1]){
-                    
                     if(array[2] == this.#bookedTimes[x][2]){
                         
-                        if(array[3] > this.#bookedTimes[x][3] && array[3] < this.#bookedTimes[x][4] || array[4] > this.#bookedTimes[x][3] && array[4] < this.#bookedTimes[x][4] || array[3] < this.#bookedTimes[x][3] && array[4] > this.#bookedTimes[x][4] || array[3] == this.#bookedTimes[x][3] &&array[4] == this.#bookedTimes[x][4] )
-                            console.log("date already booked");
+
+                        //array[3] <= this.#bookedTimes[x][4] && this.#bookedTimes[x][3] <= array[4]
+                        //array[3] > this.#bookedTimes[x][3] && array[3] < this.#bookedTimes[x][4]) || (array[4] > this.#bookedTimes[x][3] && array[4] < this.#bookedTimes[x][4]) || (array[3] < this.#bookedTimes[x][3] && array[4] > this.#bookedTimes[x][4]) ||(array[3] == this.#bookedTimes[x][3] && array[4] == this.#bookedTimes[x][4])
+                        if(array[3] <= this.#bookedTimes[x][4] && this.#bookedTimes[x][3] <= array[4] ){
+                            console.log("slot already booked");
                             collision = true;
+                            
                         }
+                        
                 }
             }
         }
+    }
+       
         if(collision == false){
             console.log("booking successfully added");
             this.#bookedTimes.push(array);
+            return true;
+        }
+        else{
             
+            return false;
         }
 
         
@@ -70,6 +79,7 @@ class Space{
     
 
 } 
+
 
 module.exports = {Space};
  
