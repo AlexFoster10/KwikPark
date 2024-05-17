@@ -47,6 +47,83 @@ window.addEventListener('click', function(e) {
 });
 });
 
+async function makeBooking() {
+  var day = document.getElementById('day').value;
+  var month = document.getElementById('month').value;
+  var year = document.getElementById('year').value;
+  var startTime = document.getElementById('start-time').value;
+  var endTime = document.getElementById('end-time').value;
+
+  // Perform form validation
+  if (!isValidDate(day, month, year)) {
+    alert("Please enter a valid date.");
+    return false;
+  }
+
+  if (!isValidTime(startTime) || !isValidTime(endTime)) {
+    alert("Please enter a valid time in HH:MM format.");
+    return false;
+  }
+
+  // If form is valid, send data to the server
+  const data = { 
+    day: day, 
+    month: month, 
+    year: year,
+    startTime: startTime,
+    endTime: endTime
+  };
+
+  try {
+    let res = await fetch("/003", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      // Redirect to the booking confirmation page
+      window.location.href = '/bookingConfirmation';
+    } else if (res.status === 211) {
+      alert("Booking failed. The selected date or time is unavailable.");
+      window.location.href = '/booking';
+    } else {
+      throw new Error('Unexpected response status: ' + res.status);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert("An error occurred. Please try again.");
+    window.location.href = '/booking';
+  }
+
+  return false; // Prevent default form submission
+}
+
+function isValidDate(day, month, year) {
+  // Basic validation for date
+  if (day.length !== 2 || month.length !== 2 || year.length !== 4) {
+    return false;
+  }
+  const dateStr = `${year}-${month}-${day}`;
+  const date = new Date(dateStr);
+  return date.getFullYear() == year && (date.getMonth() + 1) == month && date.getDate() == day;
+}
+
+function isValidTime(time) {
+  // Basic validation for time in HH:MM format
+  const timePattern = /^([01]\d|2[0-3]):([0-5]\d)$/;
+  return timePattern.test(time);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    makeBooking();
+  });
+});
+
 function getValues(){
   var day = document.getElementById('day').value;
   var month = document.getElementById('month').value;
