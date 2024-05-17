@@ -138,7 +138,7 @@ removeSpaces(area,amountToRemove){
             var data = new Booking(user,space,day,month,year,time1,time2);
             var hash = this.#bookings._hash(data.getBookingId());
             this.#bookings.set(hash, data);
-            messageController.sendNotification(user.getEmail(),511,time1 + " - " + time2, space.GetId())
+            this.messageController.sendNotification(user.getEmail(),511,time1 + " - " + time2, space.GetId())
             return true;
         }
         if(!bool){
