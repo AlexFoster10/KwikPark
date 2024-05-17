@@ -47,7 +47,16 @@ window.addEventListener('click', function(e) {
 });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector("form");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+  });
+});
+
 async function makeBooking() {
+  console.log('makeBooking called'); // Debugging statement
+
   var day = document.getElementById('day').value;
   var month = document.getElementById('month').value;
   var year = document.getElementById('year').value;
@@ -84,18 +93,19 @@ async function makeBooking() {
     });
 
     if (res.ok) {
-      // Redirect to the booking confirmation page
-      window.location.href = '/bookingConfirmation';
+      console.log('Booking successful'); // Debugging statement
+      // Show a success alert
+      alert("Booking was successful! Thank you for choosing KwikPark.");
+      // Optionally clear the form
+      document.querySelector("form").reset();
     } else if (res.status === 211) {
       alert("Booking failed. The selected date or time is unavailable.");
-      window.location.href = '/booking';
     } else {
       throw new Error('Unexpected response status: ' + res.status);
     }
   } catch (error) {
     console.error('Error:', error);
     alert("An error occurred. Please try again.");
-    window.location.href = '/booking';
   }
 
   return false; // Prevent default form submission
@@ -116,13 +126,6 @@ function isValidTime(time) {
   const timePattern = /^([01]\d|2[0-3]):([0-5]\d)$/;
   return timePattern.test(time);
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
-    makeBooking();
-  });
-});
 
 function getValues(){
   var day = document.getElementById('day').value;
