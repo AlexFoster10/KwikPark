@@ -94,7 +94,6 @@ app.post("/002",async function(req, res){
     switch(temp){
       case "200":
         res.sendStatus(200);
-        res.send(req.body.email);
         break;
       case "210":
         res.sendStatus(210);

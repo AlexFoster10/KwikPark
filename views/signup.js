@@ -47,6 +47,7 @@ async function signupForm() {
 
     if(res.status == 200) {
       // Redirect to the new page
+      localStorage.setItem(data.email);
       window.location.href = '/userHome';
     }else if(res.status = 211){
       alert("Sign up failed. This email is alredy linked to an account");
