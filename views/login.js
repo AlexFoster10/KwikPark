@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
           },
           body: JSON.stringify(data)
         })
-
+        setInfo(res.body);
         interpriteError(res.status);
     }
     return false; // Prevent default form submission
@@ -53,9 +53,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   }
 
+  function setInfo(email){
+    localStorage.setItem("user",email);
+  }
+
   function interpriteError(code){
     switch(code){
       case 200:
+        
         window.location.href = '/userHome';
         // user has submited corect information takeing them to
         break;
