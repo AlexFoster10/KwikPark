@@ -23,6 +23,7 @@ const { SiteController } = require('./controllers/SiteController.js');
 const { Booking } = require("./classes/booking.js");
 const { Space } = require('./classes/space.js');
 const {day,month,year} = require("./views/booking.js");
+const { MessageController } = require('./controllers/messageController.js')
 
 var userController = new UserController();
 
@@ -62,6 +63,9 @@ app.get('/login', (req, res) => {
 app.get('/booking', (req, res) => {
   res.render('booking');
 });
+app.get('/', (req, res) => {
+  res.render('login')
+})
 
 
 
@@ -182,6 +186,7 @@ async function main(){
 
 main();
 
+var messageController = new MessageController();
 var sam = new Customer("sam@gmail","SAM","fartword","3432432");
 var bobb = new Customer("bobb@gmail","bobby123","fartword","3432432");
 var mary = new Customer("mary@gmail","Mazza","fartword","3432432");
@@ -205,6 +210,10 @@ site1.addLot(Lot1);
 var currentLot = site1.getParkingLot("Yellow lot");
 currentLot.populate(1,10);
 currentLot.getArrayStatus();
+currentLot.addSpaces(0, 5);
+currentLot.getArrayStatus();
+currentLot.removeSpaces(0,2);
+currentLot.getArrayStatus();
 function makeBooking(){
   currentLot.createBooking(mary,currentLot.getSpaceFromId(5),day,month,year,1400,1600);
 }
@@ -212,6 +221,10 @@ function makeBooking(){
 currentLot.createBooking(oliver,currentLot.getSpaceFromId(5),10,12,2005,1550,1750);
 currentLot.getArrayStatus();
 currentLot.getBookings();
+
+
+
+// messageController.sendNotification("test@test.com",510, 1);
 
 
  

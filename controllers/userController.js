@@ -1,10 +1,8 @@
 
 const { DBManager } = require('./DBManager.js');
-
+const { message } = require('../classes/message.js');
 const { Customer } = require('../classes/customer.js');
-
-
-
+const { MessageController } = require('./messageController.js');
 const { Vehicle } = require('../classes/Vehicle.js');
 const bcrypt = require('bcrypt');
 
@@ -14,6 +12,8 @@ class UserController{
         
         
     }
+
+    messageController = new MessageController();
     //testing
     connectionTest(){
         DBManager.testIncrement();
@@ -42,17 +42,23 @@ class UserController{
     }
 
     async newCustomer(email,userName,password,phoneNumber){
+        //searh to see if this email is alredy in use
         console.log("\n\n#######################################################\n account creation \n#######################################################")
         const temp1 = await DBManager.searchCustomerArray(email);
-            if(temp1 == false){
+            if(temp1 == false){ // if it isnt encrypt password and create customer objcet
                 console.log("account can be created")
                 const encryptedPassword = await this.encrypt(password);
                 console.log("#############ENCRYPTED_PW#################");
-                const temp2 = new Customer(email, userName, encryptedPassword, phoneNumber);
-                console.log("##############################");
 
+                //createing system message objcet and an objcet of the user
+                const temp2 = new Customer(email, userName, encryptedPassword, phoneNumber);
+                this.messageController.newMessage("System@kwikpark.co.uk",temp2.getEmail(),`Hello ${temp2.getUsername} this is your notification chat where you will recive system mesages. Thankyou for chooseing Kwikpark`);
+                
+                //adds user ram memory and long term storage
                 DBManager.createAccountCustomer(temp2);
                 DBManager.saveAccToDB(temp2);
+
+                //create new message
                 return true;   
             }else{
                 console.log("account alredy exists");

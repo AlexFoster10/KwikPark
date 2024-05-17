@@ -3,19 +3,27 @@ class Space{
     #area = 0; 
     #id = 0; 
     #bookedTimes = [];      //{"10-12-2004,1400-1500","10-13-2004,1600-1730"} //1012200414001500
-
+    #blocked = false;
 
     constructor(area,id){
         this.#area = area;
         this.#id = id;
-        this.#booked = false
-
+        this.#booked = false;
+        this.#blocked = false;
     }
 
     GetStatus(){
 
         console.log("Space ID: "+ this.#id + " Booking Status: "+ this.#booked)
         return this.#booked;
+    }
+
+    setBlocked(){
+        this.#blocked = true;
+    }
+
+    setUnBlocked(){
+        this.#blocked = false;
     }
 
     setBooked(){
@@ -29,8 +37,16 @@ class Space{
     GetId(){
         return this.#id;
     }
+    GetArea(){
+        return this.#area;
+    }
     
     attemptBooking(day,month,year,time1,time2){
+
+        if(this.#blocked == true){
+            return false;
+        }
+
         var array = [];
         var collision = false;
         array.push(day);
@@ -40,6 +56,7 @@ class Space{
         array.push(time2);
         console.log(array);
         
+
         
        
         for(let x = 0;x < this.#bookedTimes.length;x++){

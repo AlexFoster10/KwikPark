@@ -20,6 +20,34 @@ class ParkingLot{
         this.#spaces = array;
     }
     
+addSpaces(area,amount){
+    var count = 0;
+    for(let x = 0;x < this.#spaces.length;x++){
+        console.log(this.#spaces[x].GetArea() );
+        if(this.#spaces[x].GetArea() == area){
+            count++;
+        }
+
+    }
+    for(let x = 0;x < amount;x++){
+        console.log(count+x);
+        this.#spaces.push(new Space(area,count+x));
+    }
+}
+
+removeSpaces(area,amountToRemove){
+    var count = 0;
+    for(let x = this.#spaces.length - 1; x > 0;x--){
+        if(this.#spaces[x].GetArea() == area){
+            count++;
+            if(count <= amountToRemove){
+                this.#spaces.splice(this.#spaces[x], 1);
+            }
+        }
+    }
+    
+}
+
     //x is zone number a is space number
     populate(x,a){
         this.#bookings.addSize(a);
