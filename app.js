@@ -105,14 +105,20 @@ app.post("/002",async function(req, res){
         res.sendStatus(500);
         // if its not one of the posible options we send a server error code    
     }
-      
-    
-    
-    
-
-    
-
 })
+
+app.post("/003", async function(req, res){
+  console.log('Received POST request on /003');
+  console.log(req.body);
+
+  // Extract data from the request body
+  const { day, month, year, startTime, endTime } = req.body;
+
+  // Process the booking (e.g., save to database)
+  
+  // Send a success response
+  res.status(200).send("Booking received successfully");
+});
 
 
 

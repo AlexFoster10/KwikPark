@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Signup Page
+    title Booking Page
     style
       include style/style.css
       include style/booking.css
@@ -21,23 +21,21 @@ html
           a(href='/booking') Booking
       h1.subHeading Make booking
       .main
-        form.form(onsubmit = "getValues()")
-          
+        form.form(onsubmit="return makeBooking()")
           .box
+            label.label(for="date") Enter desired date:
+            input.input(type="text", id="day", name="day", maxlength="2", minlength="2", placeholder="DD")
+            input.input(type="text", id="month", name="month", maxlength="2", minlength="2", placeholder="MM")
+            input.input(type="text", id="year", name="year", maxlength="4", minlength="4", placeholder="YYYY")
             
-          label.label(for="new-username") Enter desired date:
-          input.input(type="text", id="day", name="day",maxlength="2",minlength="2", placeholder="DD")
-
-          input.input(type="text", id="month", name="month",maxlength="2",minlength="2", placeholder="MM")
-          input.input(type="text", id="year", name="year",maxlength="4",minlength="4", placeholder="YYYY")
-
-          button.login(type="submit" onsubmit="") Make Booking
-        // Button to navigate to another page
-        
+            label.label(for="start-time") Enter starting time:
+            input.input(type="text", id="start-time", name="start-time", maxlength="5", minlength="5", placeholder="HH:MM")
             
-        
+            label.label(for="end-time") Enter ending time:
+            input.input(type="text", id="end-time", name="end-time", maxlength="5", minlength="5", placeholder="HH:MM")
 
-      
+          button.login(type="submit") Make Booking
+
     script
       include booking.js
       include index.js
