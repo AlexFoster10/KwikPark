@@ -22,7 +22,7 @@ const { ParkingLot } = require('./classes/parkingLot.js');
 const { SiteController } = require('./controllers/SiteController.js');
 const { Booking } = require("./classes/booking.js");
 const { Space } = require('./classes/space.js');
-const {day,month,year} = require("./views/booking.js");
+
 const { MessageController } = require('./controllers/messageController.js')
 
 var userController = new UserController();
@@ -56,6 +56,7 @@ app.get('/message', (req, res) => {
 });
 app.get('/signup', (req, res) => {
   res.render('signup');
+  
 });
 app.get('/login', (req, res) => {
   res.render('login');

@@ -1,11 +1,11 @@
 
-
+document1 = document;
 async function signupForm() {
-  var email = document.getElementById('email').value;
-  var phone = document.getElementById('phoneNum').value;
-  var userName = document.getElementById('newUsr').value;
-  var password = document.getElementById('password').value;
-  var password2 = document.getElementById('confirmPass').value;
+  var email = document1.getElementById('email').value;
+  var phone = document1.getElementById('phoneNum').value;
+  var userName = document1.getElementById('newUsr').value;
+  var password = document1.getElementById('password').value;
+  var password2 = document1.getElementById('confirmPass').value;
 
   // Perform form validation
   if (validEmail(email) == false) {
@@ -105,3 +105,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+//module.exports = {userName};

@@ -23,14 +23,14 @@ class ParkingLot{
 addSpaces(area,amount){
     var count = 0;
     for(let x = 0;x < this.#spaces.length;x++){
-        //console.log(this.#spaces[x].GetArea() );
+        
         if(this.#spaces[x].GetArea() == area){
             count++;
         }
 
     }
     for(let x = 0;x < amount;x++){
-        console.log(count+x);
+        
         this.#spaces.push(new Space(area,count+x));
     }
 }
