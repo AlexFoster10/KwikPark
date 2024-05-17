@@ -114,7 +114,7 @@ app.post("/003", async function(req, res){
   // Extract data from the request body
   const { day, month, year, startTime, endTime } = req.body;
 
-  // Process the booking (e.g., save to database)
+  // Process the booking
   
   // Send a success response
   res.status(200).send("Booking received successfully");
