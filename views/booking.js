@@ -79,6 +79,7 @@ async function makeBooking() {
     day: day, 
     month: month, 
     year: year,
+    email: localStorage.getItem("user"),
     startTime: startTime,
     endTime: endTime
   };

@@ -2,6 +2,7 @@ const {Space} = require("./space.js");
 const {Booking} = require("./booking.js");
 const {User} = require("./user.js");
 const {HashTable} = require("./hashTable.js");
+const {MessageController} = require("../controllers/messageController.js");
 
 class ParkingLot{
     #name = "";
@@ -15,6 +16,8 @@ class ParkingLot{
     constructor(name){
         this.#name = name;
     }
+
+    messageController = new MessageController();
 
     setSpaces(array){
         this.#spaces = array;
@@ -135,6 +138,7 @@ removeSpaces(area,amountToRemove){
             var data = new Booking(user,space,day,month,year,time1,time2);
             var hash = this.#bookings._hash(data.getBookingId());
             this.#bookings.set(hash, data);
+            messageController.sendNotification(user.getEmail(),511,time1 + " - " + time2, space.GetId())
             return true;
         }
         if(!bool){
