@@ -36,7 +36,7 @@ class Message{
     }
 
     writeToFile(){
-        fs.writeFileSync("Messages/"+this.messageTitle+".JSON",JSON.stringify(this), callbackify)
+        fs.writeFileSync("Messages/"+this.sender+"--"+this.reciever , callbackify);
     }
 
     readFromFile(){

@@ -45,22 +45,21 @@ document.addEventListener("DOMContentLoaded", function() {
           },
           body: JSON.stringify(data)
         })
-        setInfo(res.body);
-        interpriteError(res.status);
+        interpriteError(res.status,data.email);
     }
     return false; // Prevent default form submission
 
 
   }
 
-  function setInfo(email){
-    localStorage.setItem("user",email);
+  function setInfo(data){
+    localStorage.setItem("userEmail",data);
   }
 
-  function interpriteError(code){
+  function interpriteError(code,email){
     switch(code){
       case 200:
-        
+        setInfo(email); 
         window.location.href = '/userHome';
         // user has submited corect information takeing them to
         break;
