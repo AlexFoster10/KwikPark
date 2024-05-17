@@ -181,10 +181,16 @@ const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 // Main
 
 async function main(){
-//newUser();
+  await messageController.newMessage("email@email.com", "greg_2@gmail.com", "hello greg this is a new message string");
+  await messageController.newMessage("greg_2@gmail.com", "email@email.com", "hello greg this is a new message string");
+  
+  
+  
+  
+  sleep(10000000); 
 }
 
-main();
+
 
 var messageController = new MessageController();
 var sam = new Customer("sam@gmail","SAM","fartword","3432432");
@@ -222,6 +228,9 @@ currentLot.createBooking(oliver,currentLot.getSpaceFromId(5),10,12,2005,1550,175
 currentLot.getArrayStatus();
 currentLot.getBookings();
 
+ 
+
+main();
 
 
 // messageController.sendNotification("test@test.com",510, 1);

@@ -23,7 +23,7 @@ class ParkingLot{
 addSpaces(area,amount){
     var count = 0;
     for(let x = 0;x < this.#spaces.length;x++){
-        console.log(this.#spaces[x].GetArea() );
+        //console.log(this.#spaces[x].GetArea() );
         if(this.#spaces[x].GetArea() == area){
             count++;
         }

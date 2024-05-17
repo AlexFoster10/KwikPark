@@ -52,13 +52,14 @@ class UserController{
 
                 //createing system message objcet and an objcet of the user
                 const temp2 = new Customer(email, userName, encryptedPassword, phoneNumber);
-                this.messageController.newMessage("System@kwikpark.co.uk",temp2.getEmail(),`Hello ${temp2.getUsername} this is your notification chat where you will recive system mesages. Thankyou for chooseing Kwikpark`);
+                
                 
                 //adds user ram memory and long term storage
                 DBManager.createAccountCustomer(temp2);
                 DBManager.saveAccToDB(temp2);
 
                 //create new message
+                this.messageController.newMessage("System@kwikpark.co.uk",temp2.getEmail(),`Hello ${temp2.getUsername()} this is your notification chat where you will recive system mesages. Thankyou for chooseing Kwikpark`);
                 return true;   
             }else{
                 console.log("account alredy exists");

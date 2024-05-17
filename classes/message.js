@@ -17,6 +17,11 @@ class Message{
         this.body = body;
     }
 
+    toString(){
+        console.log(this.sender);
+        console.log(this.reciever);
+        console.log(this.body)
+    }
 
     getMessages(){
 
